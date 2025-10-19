@@ -1,3 +1,309 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="src/assets/images/base-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Quintal do Céu - Transformando vidas através da compaixão e ação social. Conectamos voluntários, doadores e comunidades para criar impacto positivo.">
+    <meta name="keywords" content="ONG, voluntariado, doações, projetos sociais, Quintal do Céu">
+    <meta name="author" content="Quintal do Céu">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Quintal do Céu - Transformando Vidas">
+    <meta property="og:description" content="Conectamos voluntários, doadores e comunidades para criar impacto positivo através de projetos sociais.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quintal-do-ceu.org">
+    <meta property="og:image" content="/src/assets/icons/base-icon.svg">
+
+    <title>Quintal do Céu - Transformando Vidas</title>
+    <link rel="stylesheet" href="/src/styles/styles.css">
+  </head>
+  <body>
+    <!-- Cabeçalho Principal -->
+    <header class="main-header">
+      <nav class="main-navigation" role="navigation" aria-label="Navegação principal">
+        <div class="nav-container">
+          <div class="logo">
+            <img src="/src/assets/icons/quintal-icone.png" alt="Logo Quintal do Céu" width="120" height="60">
+            <h1 class="sr-only">Quintal do Céu</h1>
+          </div>
+          
+          <ul class="nav-menu">
+            <li><a href="index.html" aria-current="page">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="cadastro.html" class="cta-button">Voluntariar-se</a></li>
+          </ul>
+          
+          <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+      <!-- Seção Hero -->
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-container">
+          <div class="hero-content">
+            <h1 id="hero-title">Transformando Vidas Através da Compaixão</h1>
+            <p class="hero-subtitle">
+              Conectamos corações generosos a causas que importam. 
+              Junte-se a nós na missão de criar um mundo mais justo e solidário.
+            </p>
+            <div class="hero-actions">
+              <a href="cadastro.html" class="btn btn-primary">Seja Voluntário</a>
+              <a href="#como-doar" class="btn btn-secondary">Faça uma Doação</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="/src/assets/images/voluntarios-ajundando-criancas1.webp" alt="Voluntários ajudando crianças em atividade educativa" loading="lazy">
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Sobre a Organização -->
+      <section id="sobre" class="about-section" aria-labelledby="about-title">
+        <div class="container">
+          <h2 id="about-title">Sobre a Quintal do Céu</h2>
+          
+          <div class="about-grid">
+            <article class="about-card">
+              <h3>Nossa Missão</h3>
+              <p>
+                Promover transformação social através de projetos que atendem comunidades 
+                em situação de vulnerabilidade, conectando voluntários engajados a causas 
+                que geram impacto real e duradouro.
+              </p>
+            </article>
+            
+            <article class="about-card">
+              <h3>Nossa Visão</h3>
+              <p>
+                Ser reconhecida como uma organização referência em inovação social, 
+                criando uma rede colaborativa que amplifica o potencial transformador 
+                de cada pessoa e comunidade.
+              </p>
+            </article>
+            
+            <article class="about-card">
+              <h3>Nossos Valores</h3>
+              <ul>
+                <li><strong>Transparência:</strong> Prestação de contas clara e acessível</li>
+                <li><strong>Inclusão:</strong> Oportunidades para todos, sem distinção</li>
+                <li><strong>Sustentabilidade:</strong> Soluções que perduram no tempo</li>
+                <li><strong>Colaboração:</strong> Trabalho em rede e parcerias estratégicas</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Impacto e Números -->
+      <section class="impact-section" aria-labelledby="impact-title">
+        <div class="container">
+          <h2 id="impact-title">Nosso Impacto em Números</h2>
+          <div class="impact-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="5420">0</span>
+              <span class="stat-label">Vidas Impactadas</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="127">0</span>
+              <span class="stat-label">Voluntários Ativos</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="23">0</span>
+              <span class="stat-label">Projetos Ativos</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="8">0</span>
+              <span class="stat-label">Anos de Atuação</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Projetos em Destaque -->
+      <section class="featured-projects" aria-labelledby="featured-title">
+        <div class="container">
+          <h2 id="featured-title">Projetos em Destaque</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <img src="/src/assets/images/atividade-educativa1.webp" alt="Crianças participando de atividade educativa" loading="lazy">
+              <div class="project-content">
+                <h3>Educação para Todos</h3>
+                <p>Oferecemos reforço escolar e atividades complementares para crianças de comunidades carentes.</p>
+                <a href="projetos.html#educacao" class="btn btn-outline">Saiba Mais</a>
+              </div>
+            </article>
+            
+            <article class="project-card">
+              <img src="/src/assets/images/distribuicao-alimentos1.webp" alt="Distribuição de alimentos para famílias" loading="lazy">
+              <div class="project-content">
+                <h3>Alimentação Solidária</h3>
+                <p>Distribuição semanal de cestas básicas e refeições para famílias em vulnerabilidade alimentar.</p>
+                <a href="projetos.html#alimentacao" class="btn btn-outline">Saiba Mais</a>
+              </div>
+            </article>
+            
+            <article class="project-card">
+              <img src="/src/assets/images/voluntario-plantando-arvores2.webp" alt="Voluntários plantando árvores" loading="lazy">
+              <div class="project-content">
+                <h3>Verde Urbano</h3>
+                <p>Revitalização de espaços urbanos através de plantio de árvores e criação de hortas comunitárias.</p>
+                <a href="projetos.html#meio-ambiente" class="btn btn-outline">Saiba Mais</a>
+              </div>
+            </article>
+          </div>
+          
+          <div class="projects-cta">
+            <a href="projetos.html" class="btn btn-primary">Ver Todos os Projetos</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Como Doar -->
+      <section id="como-doar" class="donation-section" aria-labelledby="donation-title">
+        <div class="container">
+          <h2 id="donation-title">Como Você Pode Ajudar</h2>
+          <div class="donation-options">
+            <div class="donation-card">
+              <h3>Doação Financeira</h3>
+              <p>Contribua com qualquer valor para nossos projetos. Toda doação faz a diferença!</p>
+              <div class="donation-amounts">
+                <button class="amount-btn" data-amount="25">R$ 25</button>
+                <button class="amount-btn" data-amount="50">R$ 50</button>
+                <button class="amount-btn" data-amount="100">R$ 100</button>
+                <button class="amount-btn custom">Outro valor</button>
+              </div>
+              <button class="btn btn-primary">Doar Agora</button>
+            </div>
+            
+            <div class="donation-card">
+              <h3>Doação de Materiais</h3>
+              <p>Aceitamos roupas, livros, brinquedos e materiais escolares em bom estado.</p>
+              <ul class="donation-items">
+                <li>Roupas infantis e adultas</li>
+                <li>Livros didáticos e literatura</li>
+                <li>Brinquedos educativos</li>
+                <li>Material escolar</li>
+              </ul>
+              <a href="#contato" class="btn btn-secondary">Agendar Entrega</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="contact-section" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Entre em Contato</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Informações de Contato</h3>
+            <address class="contact-details">
+              <div class="contact-item">
+                <strong>Endereço:</strong>
+                <span>Rua da Esperança, 123 - Centro<br>São Paulo, SP - CEP: 01234-567</span>
+              </div>
+              <div class="contact-item">
+                <strong>Telefone:</strong>
+                <a href="tel:+551123456789">(11) 2345-6789</a>
+              </div>
+              <div class="contact-item">
+                <strong>WhatsApp:</strong>
+                <a href="https://wa.me/5511987654321">(11) 98765-4321</a>
+              </div>
+              <div class="contact-item">
+                <strong>E-mail:</strong>
+                <a href="mailto:contato@quintal-do-ceu.org">contato@quintal-do-ceu.org</a>
+              </div>
+            </address>
+            
+            <div class="social-media">
+              <h4>Siga-nos nas Redes Sociais</h4>
+              <div class="social-links">
+                <a href="https://facebook.com/quintal-do-ceu" aria-label="Facebook da Quintal do Céu" target="_blank" rel="noopener">
+                  <img src="/src/assets/icons/facebook.png" alt="Facebook" width="24" height="24">
+                </a>
+                <a href="https://instagram.com/quintal-do-ceu" aria-label="Instagram da Quintal do Céu" target="_blank" rel="noopener">
+                  <img src="/src/assets/icons/instagram.png" alt="Instagram" width="24" height="24">
+                </a>
+                <a href="https://linkedin.com/company/quintal-do-ceu" aria-label="LinkedIn da Quintal do Céu" target="_blank" rel="noopener">
+                  <img src="/src/assets/icons/linkedin.png" alt="LinkedIn" width="24" height="24">
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-hours">
+            <h3>Horário de Funcionamento</h3>
+            <dl class="hours-list">
+              <dt>Segunda a Sexta:</dt>
+              <dd>8h às 18h</dd>
+              <dt>Sábado:</dt>
+              <dd>8h às 12h</dd>
+              <dt>Domingo:</dt>
+              <dd>Fechado</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Quintal do Céu</h4>
+            <p>Transformando vidas através da compaixão e ação social.</p>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Links Úteis</h4>
+            <ul>
+              <li><a href="projetos.html">Nossos Projetos</a></li>
+              <li><a href="cadastro.html">Seja Voluntário</a></li>
+              <li><a href="#como-doar">Como Doar</a></li>
+              <li><a href="/relatorios.html">Transparência</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Documentos</h4>
+            <ul>
+              <li><a href="/docs/estatuto.pdf" target="_blank">Estatuto Social</a></li>
+              <li><a href="/docs/cnpj.pdf" target="_blank">Certificado CNPJ</a></li>
+              <li><a href="/docs/utilidade-publica.pdf" target="_blank">Utilidade Pública</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Newsletter</h4>
+            <p>Receba nossas novidades e atualizações dos projetos.</p>
+            <form class="newsletter-form" action="#" method="post">
+              <label for="newsletter-email" class="sr-only">Seu e-mail para newsletter</label>
+              <input type="email" id="newsletter-email" name="email" placeholder="Seu e-mail" required>
+              <button type="submit" class="btn btn-primary">Inscrever</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2024 Quintal do Céu. Todos os direitos reservados.</p>
+          <p>CNPJ: 12.345.678/0001-90 | <a href="/politica-privacidade.html">Política de Privacidade</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
