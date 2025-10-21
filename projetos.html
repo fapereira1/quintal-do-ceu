@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="src/assets/icons/quintal-icone.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Quintal do Céu - Transformando vidas através da compaixão e ação social. Conectamos voluntários, doadores e comunidades para criar impacto positivo.">
+  <meta name="keywords" content="ONG, voluntariado, doações, projetos sociais, Quintal do Céu">
+  <meta name="author" content="Quintal do Céu">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Quintal do Céu - Transformando Vidas">
+  <meta property="og:description"
+    content="Conectamos voluntários, doadores e comunidades para criar impacto positivo através de projetos sociais.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://quintal-do-ceu.org">
+  <meta property="og:image" content="src/assets/icons/quintal-icone.png">
+
+
+  <title>Projetos Sociais - Quintal do Céu</title>
+  <link rel="stylesheet" href="src/styles/styles.css">
+</head>
+
+<body>
+  <!-- Cabeçalho Principal -->
+  <header class="main-header">
+    <nav class="main-navigation" role="navigation" aria-label="Navegação principal">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="src/assets/icons/quintal-icone.png" alt="Logo Quintal do Céu" width="120" height="60">
+          </a>
+        </div>
+
+        <ul class="nav-menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+          <li><a href="index.html#sobre">Sobre Nós</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+          <li><a href="cadastro.html" class="cta-button">Voluntariar-se</a></li>
+        </ul>
+
+        <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="main-content">
+    <!-- Seção Hero -->
+    <section class="page-hero" aria-labelledby="projects-hero-title">
+      <div class="hero-container">
+        <h1 id="projects-hero-title">Nossos Projetos Sociais</h1>
+        <p class="hero-subtitle">
+          Conheça as iniciativas que estão transformando vidas e comunidades.
+          Cada projeto representa nossa missão de criar um impacto positivo e duradouro.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filtros de Projetos -->
+    <section class="projects-filters" aria-label="Filtros de projetos">
+      <div class="container">
+        <div class="filter-tabs" role="tablist">
+          <button class="filter-tab active" role="tab" aria-selected="true" data-filter="todos">
+            Todos os Projetos
+          </button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="educacao">
+            Educação
+          </button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="alimentacao">
+            Alimentação
+          </button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="meio-ambiente">
+            Meio Ambiente
+          </button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="saude">
+            Saúde
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid de Projetos -->
+    <section class="projects-section" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title" class="sr-only">Lista de Projetos</h2>
+
+        <div class="projects-grid">
+          <!-- Projeto 1: Educação para Todos -->
+          <article id="educacao" class="project-card" data-category="educacao">
+            <div class="project-image">
+              <img src="src/assets/images/atividade-educativa2.webp"
+                alt="Crianças em sala de aula durante atividade de reforço escolar" loading="lazy">
+              <div class="project-status">Ativo</div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-category">Educação</div>
+              <h3>Educação para Todos</h3>
+              <p class="project-description">
+                Oferecemos reforço escolar, alfabetização de adultos e atividades complementares
+                para crianças e jovens de comunidades em vulnerabilidade social.
+              </p>
+
+              <div class="project-stats">
+                <div class="stat">
+                  <span class="stat-number">280</span>
+                  <span class="stat-label">Beneficiados</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">15</span>
+                  <span class="stat-label">Voluntários</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">3</span>
+                  <span class="stat-label">Locais</span>
+                </div>
+              </div>
+
+              <div class="project-needs">
+                <h4>Como Você Pode Ajudar:</h4>
+                <ul>
+                  <li><strong>Voluntariado:</strong> Professores, estudantes universitários</li>
+                  <li><strong>Doações:</strong> Material escolar, livros didáticos</li>
+                  <li><strong>Financeiro:</strong> R$ 50/mês custeia 1 criança</li>
+                </ul>
+              </div>
+
+              <div class="project-actions">
+                <a href="cadastro.html?projeto=educacao" class="btn btn-primary">Quero Ajudar</a>
+                <button class="btn btn-outline" data-modal="educacao-details">Ver Detalhes</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 2: Alimentação Solidária -->
+          <article id="alimentacao" class="project-card" data-category="alimentacao">
+            <div class="project-image">
+              <img src="src/assets/images/voluntarios-distribuindo-alimentos.webp" alt="Voluntários preparando e distribuindo refeições"
+                loading="lazy">
+              <div class="project-status">Ativo</div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-category">Alimentação</div>
+              <h3>Alimentação Solidária</h3>
+              <p class="project-description">
+                Distribuição semanal de cestas básicas, refeições prontas e programa de
+                hortas comunitárias para combater a insegurança alimentar.
+              </p>
+
+              <div class="project-stats">
+                <div class="stat">
+                  <span class="stat-number">450</span>
+                  <span class="stat-label">Famílias</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">25</span>
+                  <span class="stat-label">Voluntários</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">7</span>
+                  <span class="stat-label">Pontos</span>
+                </div>
+              </div>
+
+              <div class="project-needs">
+                <h4>Como Você Pode Ajudar:</h4>
+                <ul>
+                  <li><strong>Voluntariado:</strong> Preparo e distribuição de alimentos</li>
+                  <li><strong>Doações:</strong> Alimentos não perecíveis, cestas básicas</li>
+                  <li><strong>Financeiro:</strong> R$ 75/mês custeia 1 família</li>
+                </ul>
+              </div>
+
+              <div class="project-actions">
+                <a href="cadastro.html?projeto=alimentacao" class="btn btn-primary">Quero Ajudar</a>
+                <button class="btn btn-outline" data-modal="alimentacao-details">Ver Detalhes</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 3: Verde Urbano -->
+          <article id="meio-ambiente" class="project-card" data-category="meio-ambiente">
+            <div class="project-image">
+              <img src="src/assets/images/voluntario-plantando-arvores2.webp" alt="Voluntários plantando árvores em área urbana"
+                loading="lazy">
+              <div class="project-status">Ativo</div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-category">Meio Ambiente</div>
+              <h3>Verde Urbano</h3>
+              <p class="project-description">
+                Revitalização de espaços urbanos através de plantio de árvores, criação de
+                hortas comunitárias e educação ambiental para crianças e adultos.
+              </p>
+
+              <div class="project-stats">
+                <div class="stat">
+                  <span class="stat-number">1200</span>
+                  <span class="stat-label">Árvores</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">20</span>
+                  <span class="stat-label">Voluntários</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">12</span>
+                  <span class="stat-label">Hortas</span>
+                </div>
+              </div>
+
+              <div class="project-needs">
+                <h4>Como Você Pode Ajudar:</h4>
+                <ul>
+                  <li><strong>Voluntariado:</strong> Plantio, manutenção de hortas</li>
+                  <li><strong>Doações:</strong> Mudas, ferramentas de jardinagem</li>
+                  <li><strong>Financeiro:</strong> R$ 30/mês custeia 1 horta</li>
+                </ul>
+              </div>
+
+              <div class="project-actions">
+                <a href="cadastro.html?projeto=meio-ambiente" class="btn btn-primary">Quero Ajudar</a>
+                <button class="btn btn-outline" data-modal="meio-ambiente-details">Ver Detalhes</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 4: Saúde em Movimento -->
+          <article class="project-card" data-category="saude">
+            <div class="project-image">
+              <img src="/images/projeto-saude-detail.jpg" alt="Profissionais de saúde atendendo comunidade"
+                loading="lazy">
+              <div class="project-status">Ativo</div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-category">Saúde</div>
+              <h3>Saúde em Movimento</h3>
+              <p class="project-description">
+                Atendimento médico básico, campanhas de vacinação e palestras de prevenção
+                em comunidades com acesso limitado aos serviços de saúde.
+              </p>
+
+              <div class="project-stats">
+                <div class="stat">
+                  <span class="stat-number">650</span>
+                  <span class="stat-label">Atendimentos</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">12</span>
+                  <span class="stat-label">Profissionais</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">8</span>
+                  <span class="stat-label">Campanhas</span>
+                </div>
+              </div>
+
+              <div class="project-needs">
+                <h4>Como Você Pode Ajudar:</h4>
+                <ul>
+                  <li><strong>Voluntariado:</strong> Profissionais de saúde, estudantes</li>
+                  <li><strong>Doações:</strong> Medicamentos, equipamentos médicos</li>
+                  <li><strong>Financeiro:</strong> R$ 100/mês custeia 1 campanha</li>
+                </ul>
+              </div>
+
+              <div class="project-actions">
+                <a href="cadastro.html?projeto=saude" class="btn btn-primary">Quero Ajudar</a>
+                <button class="btn btn-outline" data-modal="saude-details">Ver Detalhes</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 5: Capacitação Profissional -->
+          <article class="project-card" data-category="educacao">
+            <div class="project-image">
+              <img src="/images/projeto-capacitacao-detail.jpg" alt="Jovens em curso de capacitação profissional"
+                loading="lazy">
+              <div class="project-status">Em Planejamento</div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-category">Educação</div>
+              <h3>Capacitação Profissional</h3>
+              <p class="project-description">
+                Cursos de capacitação profissional e empreendedorismo para jovens e adultos,
+                promovendo autonomia financeira e inserção no mercado de trabalho.
+              </p>
+
+              <div class="project-stats">
+                <div class="stat">
+                  <span class="stat-number">150</span>
+                  <span class="stat-label">Meta Alunos</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">8</span>
+                  <span class="stat-label">Cursos</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">2</span>
+                  <span class="stat-label">Unidades</span>
+                </div>
+              </div>
+
+              <div class="project-needs">
+                <h4>Como Você Pode Ajudar:</h4>
+                <ul>
+                  <li><strong>Voluntariado:</strong> Instrutores, empresários mentores</li>
+                  <li><strong>Doações:</strong> Equipamentos, computadores</li>
+                  <li><strong>Financeiro:</strong> R$ 120/mês custeia 1 aluno</li>
+                </ul>
+              </div>
+
+              <div class="project-actions">
+                <a href="cadastro.html?projeto=capacitacao" class="btn btn-primary">Quero Ajudar</a>
+                <button class="btn btn-outline" data-modal="capacitacao-details">Ver Detalhes</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 6: Apoio ao Idoso -->
+          <article class="project-card" data-category="saude">
+            <div class="project-image">
+              <img src="/src/assets/images/idoso-atividade-recreativa1.webp"
+                alt="Voluntários interagindo com idosos em atividade recreativa" loading="lazy">
+              <div class="project-status">Ativo</div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-category">Saúde</div>
+              <h3>Apoio ao Idoso</h3>
+              <p class="project-description">
+                Atividades recreativas, acompanhamento médico domiciliar e suporte emocional
+                para idosos em situação de vulnerabilidade ou isolamento social.
+              </p>
+
+              <div class="project-stats">
+                <div class="stat">
+                  <span class="stat-number">85</span>
+                  <span class="stat-label">Idosos</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">18</span>
+                  <span class="stat-label">Voluntários</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">4</span>
+                  <span class="stat-label">Regiões</span>
+                </div>
+              </div>
+
+              <div class="project-needs">
+                <h4>Como Você Pode Ajudar:</h4>
+                <ul>
+                  <li><strong>Voluntariado:</strong> Companhia, atividades recreativas</li>
+                  <li><strong>Doações:</strong> Produtos de higiene, medicamentos</li>
+                  <li><strong>Financeiro:</strong> R$ 80/mês custeia 1 idoso</li>
+                </ul>
+              </div>
+
+              <div class="project-actions">
+                <a href="cadastro.html?projeto=idoso" class="btn btn-primary">Quero Ajudar</a>
+                <button class="btn btn-outline" data-modal="idoso-details">Ver Detalhes</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Como Ser Voluntário -->
+    <section class="volunteer-section" aria-labelledby="volunteer-title">
+      <div class="container">
+        <h2 id="volunteer-title">Como Se Tornar Voluntário</h2>
+        <div class="volunteer-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Inscreva-se</h3>
+            <p>Preencha nosso formulário de cadastro com suas informações e áreas de interesse.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Entrevista</h3>
+            <p>Participaremos de uma conversa para conhecer melhor seu perfil e expectativas.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Capacitação</h3>
+            <p>Oferecemos treinamento específico para que você esteja preparado para contribuir.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Ação</h3>
+            <p>Comece a fazer a diferença nos projetos que mais combinam com seu perfil!</p>
+          </div>
+        </div>
+
+        <div class="volunteer-cta">
+          <a href="cadastro.html" class="btn btn-primary btn-large">Quero Ser Voluntário</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Formas de Doar -->
+    <section class="donation-methods" aria-labelledby="donation-methods-title">
+      <div class="container">
+        <h2 id="donation-methods-title">Formas de Contribuir</h2>
+        <div class="donation-grid">
+          <div class="donation-method">
+            <h3>PIX</h3>
+            <p>Chave PIX: <strong>doe@quintal-do-ceu.org</strong></p>
+            <p>Doação rápida e segura direto da sua conta bancária.</p>
+          </div>
+
+          <div class="donation-method">
+            <h3>Transferência Bancária</h3>
+            <p><strong>Banco do Brasil</strong><br>
+              Agência: 1234-5<br>
+              Conta: 12345-6<br>
+              CNPJ: 12.345.678/0001-90</p>
+          </div>
+
+          <div class="donation-method">
+            <h3>Cartão de Crédito</h3>
+            <p>Através da nossa plataforma online, com total segurança e praticidade.</p>
+            <button class="btn btn-primary">Doar Online</button>
+          </div>
+
+          <div class="donation-method">
+            <h3>Doação Recorrente</h3>
+            <p>Programe doações mensais automáticas e ajude de forma contínua.</p>
+            <button class="btn btn-secondary">Programar Doação</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Quintal do Céu</h4>
+          <p>Transformando vidas através da compaixão e ação social.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Links Úteis</h4>
+          <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="projetos.html">Nossos Projetos</a></li>
+            <li><a href="cadastro.html">Seja Voluntário</a></li>
+            <li><a href="/relatorios.html">Transparência</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contato</h4>
+          <p>Rua da Esperança, 123 - Centro<br>São Paulo, SP - CEP: 01234-567</p>
+          <p>Telefone: (11) 2345-6789</p>
+          <p>E-mail: contato@quintal-do-ceu.org</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Siga-nos</h4>
+          <div class="social-links">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Quintal do Céu. Todos os direitos reservados.</p>
+        <p>CNPJ: 12.345.678/0001-90 | <a href="/politica-privacidade.html">Política de Privacidade</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

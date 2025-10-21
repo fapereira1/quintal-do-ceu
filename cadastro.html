@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cadastre-se como voluntário na Quintal do Céu. Preencha nosso formulário e faça parte da nossa missão de transformar vidas.">
+    <meta name="keywords" content="voluntário, cadastro, inscrição, Quintal do Céu, projetos sociais">
+    <meta name="author" content="Quintal do Céu">
+    
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Quintal do Céu - Transformando Vidas">
+  <meta property="og:description"
+    content="Conectamos voluntários, doadores e comunidades para criar impacto positivo através de projetos sociais.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://quintal-do-ceu.org">
+  <meta property="og:image" content="src/assets/icons/quintal-icone.png">
+    
+    <title>Cadastro de Voluntário - Quintal do Céu</title>
+  </head>
+  <body>
+    <!-- Cabeçalho Principal -->
+    <header class="main-header">
+      <nav class="main-navigation" role="navigation" aria-label="Navegação principal">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="index.html">
+            <img src="src/assets/icons/quintal-icone.png" alt="Logo Quintal do Céu" width="120" height="60">
+            </a>
+          </div>
+          
+          <ul class="nav-menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="index.html#sobre">Sobre Nós</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+            <li><a href="cadastro.html" class="cta-button" aria-current="page">Voluntariar-se</a></li>
+          </ul>
+          
+          <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+      <!-- Seção Hero -->
+      <section class="page-hero" aria-labelledby="cadastro-hero-title">
+        <div class="hero-container">
+          <h1 id="cadastro-hero-title">Cadastre-se como Voluntário</h1>
+          <p class="hero-subtitle">
+            Faça parte da nossa missão de transformar vidas. Preencha o formulário abaixo 
+            e descubra como suas habilidades podem fazer a diferença em nossa comunidade.
+          </p>
+        </div>
+      </section>
+
+      <!-- Formulário de Cadastro -->
+      <section class="registration-section" aria-labelledby="form-title">
+        <div class="container">
+          <div class="registration-content">
+            <!-- Informações sobre o processo -->
+            <aside class="registration-info">
+              <h2>Por que ser voluntário?</h2>
+              <ul class="benefits-list">
+                <li>
+                  <strong>Impacto Social:</strong> 
+                  Contribua diretamente para a transformação de vidas e comunidades
+                </li>
+                <li>
+                  <strong>Desenvolvimento Pessoal:</strong> 
+                  Desenvolva novas habilidades e amplie sua rede de contatos
+                </li>
+                <li>
+                  <strong>Flexibilidade:</strong> 
+                  Escolha projetos que se alinhem com sua disponibilidade e interesses
+                </li>
+                <li>
+                  <strong>Certificação:</strong> 
+                  Receba certificados de participação para seu currículo
+                </li>
+                <li>
+                  <strong>Comunidade:</strong> 
+                  Faça parte de uma rede de pessoas engajadas e solidárias
+                </li>
+              </ul>
+              
+              <div class="process-steps">
+                <h3>Como funciona:</h3>
+                <ol>
+                  <li>Preencha o formulário de cadastro</li>
+                  <li>Participe de uma entrevista online</li>
+                  <li>Receba treinamento específico</li>
+                  <li>Comece a voluntariar!</li>
+                </ol>
+              </div>
+              
+              <div class="contact-help">
+                <h3>Precisa de ajuda?</h3>
+                <p>Entre em contato conosco:</p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/5511987654321">(11) 98765-4321</a></p>
+                <p><strong>E-mail:</strong> <a href="mailto:voluntarios@quintal-do-ceu.org">voluntarios@quintal-do-ceu.org</a></p>
+              </div>
+            </aside>
+            
+            <!-- Formulário de Cadastro -->
+            <div>
+              <form id="volunteer-form" action="#" method="post">
+                <h2>Formulário de Cadastro de Voluntário</h2>
+                <p>Todos os campos marcados com <strong>*</strong> são obrigatórios.</p>
+
+                <!-- Dados Pessoais -->
+                <fieldset>
+                  <legend>📋 Dados Pessoais</legend>
+                  
+                  <div>
+                    <label for="nome">Nome Completo <strong>*</strong></label>
+                    <input 
+                      type="text" 
+                      id="nome" 
+                      name="nome" 
+                      required 
+                      minlength="2"
+                      maxlength="100"
+                      autocomplete="name"
+                      pattern="[A-Za-zÀ-ÿ\s]{2,100}"
+                      title="Digite seu nome completo (apenas letras e espaços)"
+                    >
+                    <small>Digite seu nome completo conforme documento de identidade</small>
+                  </div>
+
+                  <div>
+                    <label for="email">E-mail <strong>*</strong></label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      required 
+                      autocomplete="email"
+                      title="Digite um e-mail válido (exemplo@dominio.com)"
+                    >
+                    <small>Utilizaremos este e-mail para contato</small>
+                  </div>
+
+                  <div>
+                    <label for="data-nascimento">Data de Nascimento <strong>*</strong></label>
+                    <input 
+                      type="date" 
+                      id="data-nascimento" 
+                      name="data-nascimento" 
+                      required 
+                      min="1930-01-01"
+                      max="2006-12-31"
+                      title="Você deve ter entre 18 e 94 anos"
+                    >
+                    <small>Você deve ter pelo menos 18 anos</small>
+                  </div>
+
+                  <div>
+                    <label for="cpf">CPF <strong>*</strong></label>
+                    <input 
+                      type="text" 
+                      id="cpf" 
+                      name="cpf" 
+                      required 
+                      placeholder="000.000.000-00"
+                      maxlength="14"
+                      pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                      title="Digite um CPF válido no formato 000.000.000-00"
+                      inputmode="numeric"
+                    >
+                    <small>Digite apenas números, a formatação é automática</small>
+                  </div>
+
+                  <div>
+                    <label for="telefone">Telefone <strong>*</strong></label>
+                    <input 
+                      type="tel" 
+                      id="telefone" 
+                      name="telefone"
+                      required 
+                      placeholder="(11) 99999-9999"
+                      maxlength="15"
+                      autocomplete="tel"
+                      pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
+                      title="Digite um telefone válido no formato (00) 99999-9999"
+                      inputmode="tel"
+                    >
+                    <small>Incluindo DDD</small>
+                  </div>
+                </fieldset>
+
+                <!-- Endereço -->
+                <fieldset>
+                  <legend>🏠 Endereço</legend>
+                  
+                  <div>
+                    <label for="cep">CEP <strong>*</strong></label>
+                    <input 
+                      type="text" 
+                      id="cep" 
+                      name="cep" 
+                      required 
+                      placeholder="00000-000"
+                      maxlength="9"
+                      pattern="\d{5}-?\d{3}"
+                      title="Digite um CEP válido no formato 00000-000"
+                      inputmode="numeric"
+                    >
+                    <small>Digite o CEP no formato 00000-000</small>
+                  </div>
+
+                  <div>
+                    <label for="endereco">Endereço (Rua/Avenida) <strong>*</strong></label>
+                    <input 
+                      type="text" 
+                      id="endereco" 
+                      name="endereco" 
+                      required 
+                      minlength="5"
+                      maxlength="200"
+                      autocomplete="street-address"
+                      title="Digite o nome da rua, avenida ou logradouro"
+                    >
+                    <small>Nome da rua, avenida ou logradouro</small>
+                  </div>
+
+                  <div>
+                    <label for="cidade">Cidade <strong>*</strong></label>
+                    <input 
+                      type="text" 
+                      id="cidade" 
+                      name="cidade" 
+                      required 
+                      minlength="2"
+                      maxlength="100"
+                      autocomplete="address-level2"
+                      pattern="[A-Za-zÀ-ÿ\s]{2,100}"
+                      title="Digite o nome da cidade (apenas letras e espaços)"
+                    >
+                    <small>Cidade onde você reside</small>
+                  </div>
+
+                  <div>
+                    <label for="estado">Estado <strong>*</strong></label>
+                    <select 
+                      id="estado" 
+                      name="estado" 
+                      required 
+                      autocomplete="address-level1"
+                      title="Selecione o estado onde você reside"
+                    >
+                      <option value="">Selecione um estado</option>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                    </select>
+                    <small>Estado onde você reside</small>
+                  </div>
+                </fieldset>
+
+                <!-- Informações de Voluntariado -->
+                <fieldset>
+                  <legend>🤝 Informações de Voluntariado</legend>
+                  
+                  <div>
+                    <fieldset>
+                      <legend>Áreas de Interesse <strong>*</strong></legend>
+                      <p>Selecione as áreas onde gostaria de atuar como voluntário (mínimo 1 área)</p>
+                      
+                      <div>
+                        <input type="checkbox" id="area-educacao" name="areas-interesse" value="educacao" required>
+                        <label for="area-educacao">Educação e Ensino</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="area-saude" name="areas-interesse" value="saude">
+                        <label for="area-saude">Saúde e Bem-estar</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="area-meio-ambiente" name="areas-interesse" value="meio-ambiente">
+                        <label for="area-meio-ambiente">Meio Ambiente</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="area-assistencia-social" name="areas-interesse" value="assistencia-social">
+                        <label for="area-assistencia-social">Assistência Social</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="area-cultura" name="areas-interesse" value="cultura">
+                        <label for="area-cultura">Cultura e Arte</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="area-esporte" name="areas-interesse" value="esporte">
+                        <label for="area-esporte">Esporte e Recreação</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="area-capacitacao" name="areas-interesse" value="capacitacao">
+                        <label for="area-capacitacao">Capacitação Profissional</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="area-idosos" name="areas-interesse" value="idosos">
+                        <label for="area-idosos">Atividades com Idosos</label>
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <div>
+                    <label for="disponibilidade">Disponibilidade <strong>*</strong></label>
+                    <select 
+                      id="disponibilidade" 
+                      name="disponibilidade" 
+                      required 
+                      title="Selecione sua disponibilidade de horário"
+                    >
+                      <option value="">Selecione sua disponibilidade</option>
+                      <option value="manha">Manhã (08h às 12h)</option>
+                      <option value="tarde">Tarde (13h às 17h)</option>
+                      <option value="noite">Noite (18h às 22h)</option>
+                      <option value="fins-de-semana">Fins de semana</option>
+                      <option value="flexivel">Flexível</option>
+                    </select>
+                    <small>Escolha o horário de sua preferência</small>
+                  </div>
+                </fieldset>
+
+                <!-- Botão de envio -->
+                <div>
+                  <button type="submit">Finalizar Cadastro</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção FAQ -->
+      <section class="faq-section" aria-labelledby="faq-title">
+        <div class="container">
+          <h2 id="faq-title">Perguntas Frequentes</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Preciso ter experiência anterior para ser voluntário?</summary>
+              <p>Não! Oferecemos treinamento completo para todos os novos voluntários. O mais importante é ter disposição para ajudar e fazer a diferença.</p>
+            </details>
+            
+            <details class="faq-item">
+              <summary>Qual é o compromisso mínimo de tempo?</summary>
+              <p>Recomendamos um compromisso mínimo de 4 horas por mês, mas você pode contribuir conforme sua disponibilidade. A consistência é mais importante que a quantidade.</p>
+            </details>
+            
+            <details class="faq-item">
+              <summary>Há algum custo para ser voluntário?</summary>
+              <p>Não há nenhum custo. Fornecemos todos os materiais necessários e, quando aplicável, ajuda de custo para transporte.</p>
+            </details>
+            
+            <details class="faq-item">
+              <summary>Posso voluntariar em mais de um projeto?</summary>
+              <p>Sim! Incentivamos nossos voluntários a participarem de diferentes projetos conforme seu interesse e disponibilidade.</p>
+            </details>
+            
+            <details class="faq-item">
+              <summary>Como funciona o processo de seleção?</summary>
+              <p>Após o cadastro, fazemos uma entrevista online para conhecer melhor seu perfil. Em seguida, oferecemos treinamento específico antes de começar as atividades.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Quintal do Céu</h4>
+            <p>Transformando vidas através da compaixão e ação social.</p>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Links Úteis</h4>
+            <ul>
+              <li><a href="index.html">Página Inicial</a></li>
+              <li><a href="projetos.html">Nossos Projetos</a></li>
+              <li><a href="cadastro.html">Seja Voluntário</a></li>
+              <li><a href="/relatorios.html">Transparência</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <p>Rua da Esperança, 123 - Centro<br>São Paulo, SP - CEP: 01234-567</p>
+            <p>Telefone: (11) 2345-6789</p>
+            <p>E-mail: contato@quintal-do-ceu.org</p>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Siga-nos</h4>
+            <div class="social-links">
+              <a href="https://facebook.com/quintaldoceu" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://instagram.com/quintaldoceu" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://linkedin.com/company/quintaldoceu" aria-label="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2024 Quintal do Céu. Todos os direitos reservados.</p>
+          <p>CNPJ: 12.345.678/0001-90 | <a href="/politica-privacidade.html">Política de Privacidade</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+  </body>
+</html>
