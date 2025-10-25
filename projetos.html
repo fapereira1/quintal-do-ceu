@@ -18,12 +18,18 @@
   <meta property="og:url" content="https://quintal-do-ceu.org">
   <meta property="og:image" content="src/assets/icons/quintal-icone.png">
 
+  <!-- Meta tags adicionais -->
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://quintal-do-ceu.org/projetos">
 
   <title>Projetos Sociais - Quintal do Céu</title>
   <link rel="stylesheet" href="src/styles/styles.css">
 </head>
 
 <body>
+  <!-- Skip Link para Acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+  
   <!-- Cabeçalho Principal -->
   <header class="main-header">
     <nav class="main-navigation" role="navigation" aria-label="Navegação principal">
@@ -33,13 +39,14 @@
             <img src="src/assets/icons/quintal-icone.png" alt="Logo Quintal do Céu" width="120" height="60">
           </a>
         </div>
+        <h1 class="site-title">Quintal do Céu</h1>
 
-        <ul class="nav-menu">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="projetos.html" aria-current="page">Projetos</a></li>
-          <li><a href="index.html#sobre">Sobre Nós</a></li>
-          <li><a href="index.html#contato">Contato</a></li>
-          <li><a href="cadastro.html" class="cta-button">Voluntariar-se</a></li>
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" role="menuitem">Início</a></li>
+          <li role="none"><a href="projetos.html" role="menuitem" aria-current="page">Projetos</a></li>
+          <li role="none"><a href="index.html#sobre" role="menuitem">Sobre Nós</a></li>
+          <li role="none"><a href="index.html#contato" role="menuitem">Contato</a></li>
+          <li role="none"><a href="cadastro.html" class="cta-button" role="menuitem">Voluntariar-se</a></li>
         </ul>
 
         <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
@@ -51,8 +58,16 @@
     </nav>
   </header>
 
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <ol>
+      <li><a href="index.html">Início</a></li>
+      <li aria-current="page">Projetos</li>
+    </ol>
+  </nav>
+
   <!-- Conteúdo Principal -->
-  <main class="main-content">
+  <main id="main-content" class="main-content" role="main">
     <!-- Seção Hero -->
     <section class="page-hero" aria-labelledby="projects-hero-title">
       <div class="hero-container">
@@ -67,20 +82,25 @@
     <!-- Filtros de Projetos -->
     <section class="projects-filters" aria-label="Filtros de projetos">
       <div class="container">
-        <div class="filter-tabs" role="tablist">
-          <button class="filter-tab active" role="tab" aria-selected="true" data-filter="todos">
+        <div class="filter-tabs" role="tablist" aria-label="Filtros de categorias de projetos">
+          <button class="filter-tab active" role="tab" aria-selected="true" 
+                  aria-controls="projects-grid" data-filter="todos" id="tab-todos">
             Todos os Projetos
           </button>
-          <button class="filter-tab" role="tab" aria-selected="false" data-filter="educacao">
+          <button class="filter-tab" role="tab" aria-selected="false" 
+                  aria-controls="projects-grid" data-filter="educacao" id="tab-educacao">
             Educação
           </button>
-          <button class="filter-tab" role="tab" aria-selected="false" data-filter="alimentacao">
+          <button class="filter-tab" role="tab" aria-selected="false" 
+                  aria-controls="projects-grid" data-filter="alimentacao" id="tab-alimentacao">
             Alimentação
           </button>
-          <button class="filter-tab" role="tab" aria-selected="false" data-filter="meio-ambiente">
+          <button class="filter-tab" role="tab" aria-selected="false" 
+                  aria-controls="projects-grid" data-filter="meio-ambiente" id="tab-meio-ambiente">
             Meio Ambiente
           </button>
-          <button class="filter-tab" role="tab" aria-selected="false" data-filter="saude">
+          <button class="filter-tab" role="tab" aria-selected="false" 
+                  aria-controls="projects-grid" data-filter="saude" id="tab-saude">
             Saúde
           </button>
         </div>
@@ -92,9 +112,9 @@
       <div class="container">
         <h2 id="projects-title" class="sr-only">Lista de Projetos</h2>
 
-        <div class="projects-grid">
+        <div id="projects-grid" class="projects-grid" role="list" aria-label="Lista de projetos sociais">
           <!-- Projeto 1: Educação para Todos -->
-          <article id="educacao" class="project-card" data-category="educacao">
+          <article id="educacao" class="project-card" role="listitem" data-category="educacao">
             <div class="project-image">
               <img src="src/assets/images/atividade-educativa2.webp"
                 alt="Crianças em sala de aula durante atividade de reforço escolar" loading="lazy">
@@ -141,7 +161,7 @@
           </article>
 
           <!-- Projeto 2: Alimentação Solidária -->
-          <article id="alimentacao" class="project-card" data-category="alimentacao">
+          <article id="alimentacao" class="project-card" role="listitem" data-category="alimentacao">
             <div class="project-image">
               <img src="src/assets/images/voluntarios-distribuindo-alimentos.webp" alt="Voluntários preparando e distribuindo refeições"
                 loading="lazy">
@@ -188,7 +208,7 @@
           </article>
 
           <!-- Projeto 3: Verde Urbano -->
-          <article id="meio-ambiente" class="project-card" data-category="meio-ambiente">
+          <article id="meio-ambiente" class="project-card" role="listitem" data-category="meio-ambiente">
             <div class="project-image">
               <img src="src/assets/images/voluntario-plantando-arvores2.webp" alt="Voluntários plantando árvores em área urbana"
                 loading="lazy">
@@ -235,9 +255,9 @@
           </article>
 
           <!-- Projeto 4: Saúde em Movimento -->
-          <article class="project-card" data-category="saude">
+          <article class="project-card" role="listitem" data-category="saude">
             <div class="project-image">
-              <img src="/images/projeto-saude-detail.jpg" alt="Profissionais de saúde atendendo comunidade"
+              <img src="src/assets/images/projeto-saude-detail.jpg" alt="Profissionais de saúde atendendo comunidade"
                 loading="lazy">
               <div class="project-status">Ativo</div>
             </div>
@@ -282,9 +302,9 @@
           </article>
 
           <!-- Projeto 5: Capacitação Profissional -->
-          <article class="project-card" data-category="educacao">
+          <article class="project-card" role="listitem" data-category="educacao">
             <div class="project-image">
-              <img src="/images/projeto-capacitacao-detail.jpg" alt="Jovens em curso de capacitação profissional"
+              <img src="src/assets/images/projeto-capacitacao-detail.jpg" alt="Jovens em curso de capacitação profissional"
                 loading="lazy">
               <div class="project-status">Em Planejamento</div>
             </div>
@@ -329,9 +349,9 @@
           </article>
 
           <!-- Projeto 6: Apoio ao Idoso -->
-          <article class="project-card" data-category="saude">
+          <article class="project-card" role="listitem" data-category="saude">
             <div class="project-image">
-              <img src="/src/assets/images/idoso-atividade-recreativa1.webp"
+              <img src="src/assets/images/idoso-atividade-recreativa1.webp"
                 alt="Voluntários interagindo com idosos em atividade recreativa" loading="lazy">
               <div class="project-status">Ativo</div>
             </div>
@@ -433,13 +453,17 @@
           <div class="donation-method">
             <h3>Cartão de Crédito</h3>
             <p>Através da nossa plataforma online, com total segurança e praticidade.</p>
-            <button class="btn btn-primary">Doar Online</button>
+            <form action="/doacao" method="post" novalidate>
+              <button type="submit" class="btn btn-primary" aria-label="Fazer doação online com cartão de crédito">Doar Online</button>
+            </form>
           </div>
 
           <div class="donation-method">
             <h3>Doação Recorrente</h3>
             <p>Programe doações mensais automáticas e ajude de forma contínua.</p>
-            <button class="btn btn-secondary">Programar Doação</button>
+            <form action="/doacao-recorrente" method="post" novalidate>
+              <button type="submit" class="btn btn-secondary" aria-label="Programar doação mensal recorrente">Programar Doação</button>
+            </form>
           </div>
         </div>
       </div>
@@ -475,7 +499,15 @@
         <div class="footer-section">
           <h4>Siga-nos</h4>
           <div class="social-links">
-
+            <a href="https://facebook.com/quintal-do-ceu" aria-label="Facebook da Quintal do Céu" target="_blank" rel="noopener">
+              <img src="src/assets/icons/facebook.png" alt="Facebook" width="24" height="24">
+            </a>
+            <a href="https://instagram.com/quintal-do-ceu" aria-label="Instagram da Quintal do Céu" target="_blank" rel="noopener">
+              <img src="src/assets/icons/instagram.png" alt="Instagram" width="24" height="24">
+            </a>
+            <a href="https://linkedin.com/company/quintal-do-ceu" aria-label="LinkedIn da Quintal do Céu" target="_blank" rel="noopener">
+              <img src="src/assets/icons/linkedin.png" alt="LinkedIn" width="24" height="24">
+            </a>
           </div>
         </div>
       </div>

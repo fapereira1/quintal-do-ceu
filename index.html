@@ -23,21 +23,24 @@
 </head>
 
 <body>
+  <!-- Skip Link para Acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+  
   <!-- Cabeçalho Principal -->
   <header class="main-header">
     <nav class="main-navigation" role="navigation" aria-label="Navegação principal">
       <div class="nav-container">
         <div class="logo">
           <img src="/src/assets/icons/quintal-icone.png" alt="Logo Quintal do Céu" width="120" height="60">
-          <h1 class="sr-only">Quintal do Céu</h1>
         </div>
+        <h1 class="site-title">Quintal do Céu</h1>
 
-        <ul class="nav-menu">
-          <li><a href="index.html" aria-current="page">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="#sobre">Sobre Nós</a></li>
-          <li><a href="#contato">Contato</a></li>
-          <li><a href="cadastro.html" class="cta-button">Voluntariar-se</a></li>
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" role="menuitem" aria-current="page">Início</a></li>
+          <li role="none"><a href="projetos.html" role="menuitem">Projetos</a></li>
+          <li role="none"><a href="#sobre" role="menuitem">Sobre Nós</a></li>
+          <li role="none"><a href="#contato" role="menuitem">Contato</a></li>
+          <li role="none"><a href="cadastro.html" class="cta-button" role="menuitem">Voluntariar-se</a></li>
         </ul>
 
         <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
@@ -50,9 +53,9 @@
   </header>
 
   <!-- Conteúdo Principal -->
-  <main class="main-content">
+  <main id="main-content" class="main-content" role="main">
     <!-- Seção Hero -->
-    <section class="hero-section" aria-labelledby="hero-title">
+    <section class="hero-section" role="banner" aria-labelledby="hero-title">
       <div class="hero-container">
         <div class="hero-content">
           <h1 id="hero-title">Transformando Vidas Através da Compaixão</h1>
@@ -138,8 +141,8 @@
     <section class="featured-projects" aria-labelledby="featured-title">
       <div class="container">
         <h2 id="featured-title">Projetos em Destaque</h2>
-        <div class="projects-grid">
-          <article class="project-card">
+        <div class="projects-grid" role="list" aria-label="Lista de projetos em destaque">
+          <article class="project-card" role="listitem">
             <img src="/src/assets/images/atividade-educativa1.webp" alt="Crianças participando de atividade educativa"
               loading="lazy">
             <div class="project-content">
@@ -149,7 +152,7 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" role="listitem">
             <img src="/src/assets/images/distribuicao-alimentos1.webp" alt="Distribuição de alimentos para famílias"
               loading="lazy">
             <div class="project-content">
@@ -159,7 +162,7 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" role="listitem">
             <img src="/src/assets/images/voluntario-plantando-arvores2.webp" alt="Voluntários plantando árvores"
               loading="lazy">
             <div class="project-content">
@@ -184,11 +187,11 @@
           <div class="donation-card">
             <h3>Doação Financeira</h3>
             <p>Contribua com qualquer valor para nossos projetos. Toda doação faz a diferença!</p>
-            <div class="donation-amounts">
-              <button class="amount-btn" data-amount="25">R$ 25</button>
-              <button class="amount-btn" data-amount="50">R$ 50</button>
-              <button class="amount-btn" data-amount="100">R$ 100</button>
-              <button class="amount-btn custom">Outro valor</button>
+            <div class="donation-amounts" role="group" aria-label="Valores de doação sugeridos">
+              <button class="amount-btn" data-amount="25" aria-label="Doar 25 reais">R$ 25</button>
+              <button class="amount-btn" data-amount="50" aria-label="Doar 50 reais">R$ 50</button>
+              <button class="amount-btn" data-amount="100" aria-label="Doar 100 reais">R$ 100</button>
+              <button class="amount-btn custom" aria-label="Doar valor personalizado">Outro valor</button>
             </div>
             <button class="btn btn-primary">Doar Agora</button>
           </div>
@@ -300,9 +303,14 @@
         <div class="footer-section">
           <h4>Newsletter</h4>
           <p>Receba nossas novidades e atualizações dos projetos.</p>
-          <form class="newsletter-form" action="#" method="post">
-            <label for="newsletter-email" class="sr-only">Seu e-mail para newsletter</label>
-            <input type="email" id="newsletter-email" name="email" placeholder="Seu e-mail" required>
+          <form class="newsletter-form" action="#" method="post" novalidate>
+            <label for="newsletter-email">Seu e-mail para newsletter</label>
+            <input type="email" id="newsletter-email" name="email" 
+                   placeholder="Seu e-mail" required 
+                   aria-describedby="newsletter-help">
+            <small id="newsletter-help" class="form-help">
+              Receba nossas novidades e atualizações dos projetos.
+            </small>
             <button type="submit" class="btn btn-primary">Inscrever</button>
           </form>
         </div>
