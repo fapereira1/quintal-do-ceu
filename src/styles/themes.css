@@ -1,0 +1,450 @@
+/* Estilos Avançados de Acessibilidade - Alto Contraste e Modo Escuro */
+
+/* Melhorias para modo de alto contraste */
+.high-contrast {
+  /* Cores de alto contraste */
+  --primary: #0000ff;
+  --primary-dark: #000080;
+  --primary-light: #4169e1;
+  --accent: #ff6600;
+  --accent-dark: #cc3300;
+  --accent-light: #ff9933;
+  --secondary: #008080;
+  --success: #00aa00;
+  --danger: #cc0000;
+  --warning: #ffaa00;
+  --info: #0088cc;
+  
+  /* Escala de cinza de alto contraste */
+  --white: #ffffff;
+  --gray-50: #ffffff;
+  --gray-100: #f0f0f0;
+  --gray-200: #e0e0e0;
+  --gray-300: #c0c0c0;
+  --gray-400: #808080;
+  --gray-600: #404040;
+  --gray-800: #202020;
+  --gray-900: #000000;
+  
+  /* Cores de texto de alto contraste */
+  --text-primary: #000000;
+  --text-secondary: #000000;
+  --text-muted: #404040;
+  --text-large: #000000;
+}
+
+/* Aplicar estilos de alto contraste */
+.high-contrast * {
+  background-color: var(--white) !important;
+  color: var(--gray-900) !important;
+  border-color: var(--gray-900) !important;
+}
+
+.high-contrast .btn-primary {
+  background-color: var(--accent) !important;
+  color: var(--white) !important;
+  border: 3px solid var(--gray-900) !important;
+  font-weight: 900 !important;
+}
+
+.high-contrast .btn-secondary {
+  background-color: var(--primary) !important;
+  color: var(--white) !important;
+  border: 3px solid var(--gray-900) !important;
+  font-weight: 900 !important;
+}
+
+.high-contrast .btn-outline {
+  background-color: var(--white) !important;
+  color: var(--gray-900) !important;
+  border: 3px solid var(--gray-900) !important;
+  font-weight: 900 !important;
+}
+
+.high-contrast .btn:hover,
+.high-contrast .btn:focus {
+  background-color: var(--gray-900) !important;
+  color: var(--white) !important;
+  border-color: var(--gray-900) !important;
+  transform: none !important;
+}
+
+.high-contrast .nav-menu a {
+  background-color: var(--white) !important;
+  color: var(--gray-900) !important;
+  border: 2px solid var(--gray-900) !important;
+  font-weight: 700 !important;
+}
+
+.high-contrast .nav-menu a:hover,
+.high-contrast .nav-menu a:focus {
+  background-color: var(--gray-900) !important;
+  color: var(--white) !important;
+  border-color: var(--gray-900) !important;
+}
+
+.high-contrast .project-card,
+.high-contrast .about-card,
+.high-contrast .donation-card {
+  background-color: var(--white) !important;
+  border: 3px solid var(--gray-900) !important;
+  box-shadow: none !important;
+}
+
+.high-contrast .project-card:hover,
+.high-contrast .about-card:hover,
+.high-contrast .donation-card:hover {
+  transform: none !important;
+  border-color: var(--accent) !important;
+}
+
+.high-contrast .filter-tab {
+  background-color: var(--white) !important;
+  color: var(--gray-900) !important;
+  border: 2px solid var(--gray-900) !important;
+  font-weight: 700 !important;
+}
+
+.high-contrast .filter-tab:hover,
+.high-contrast .filter-tab:focus {
+  background-color: var(--gray-900) !important;
+  color: var(--white) !important;
+}
+
+.high-contrast .filter-tab.active {
+  background-color: var(--accent) !important;
+  color: var(--white) !important;
+  border-color: var(--gray-900) !important;
+}
+
+.high-contrast .amount-btn {
+  background-color: var(--white) !important;
+  color: var(--gray-900) !important;
+  border: 2px solid var(--gray-900) !important;
+  font-weight: 700 !important;
+}
+
+.high-contrast .amount-btn:hover,
+.high-contrast .amount-btn:focus {
+  background-color: var(--gray-900) !important;
+  color: var(--white) !important;
+}
+
+.high-contrast .amount-btn.selected {
+  background-color: var(--accent) !important;
+  color: var(--white) !important;
+  border-color: var(--gray-900) !important;
+}
+
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  background-color: var(--white) !important;
+  color: var(--gray-900) !important;
+  border: 3px solid var(--gray-900) !important;
+  font-weight: 600 !important;
+}
+
+.high-contrast input:focus,
+.high-contrast select:focus,
+.high-contrast textarea:focus {
+  border-color: var(--primary) !important;
+  outline: 4px solid var(--accent) !important;
+  outline-offset: 2px !important;
+}
+
+.high-contrast .field-message.error {
+  background-color: var(--white) !important;
+  color: var(--danger) !important;
+  border: 2px solid var(--danger) !important;
+  font-weight: 900 !important;
+  padding: var(--spacing-xs) !important;
+}
+
+.high-contrast .field-message.success {
+  background-color: var(--white) !important;
+  color: var(--success) !important;
+  border: 2px solid var(--success) !important;
+  font-weight: 900 !important;
+  padding: var(--spacing-xs) !important;
+}
+
+.high-contrast .stat-number {
+  color: var(--primary) !important;
+  font-weight: 900 !important;
+  font-size: 3rem !important;
+}
+
+.high-contrast .stat-label {
+  color: var(--gray-900) !important;
+  font-weight: 700 !important;
+}
+
+/* Melhorias para modo escuro */
+.dark-mode {
+  /* Cores de modo escuro com contraste adequado */
+  --primary: #60a5fa;
+  --primary-dark: #3b82f6;
+  --primary-light: #93c5fd;
+  --accent: #fb923c;
+  --accent-dark: #f97316;
+  --accent-light: #fed7aa;
+  --secondary: #14b8a6;
+  --success: #34d399;
+  --danger: #f87171;
+  --warning: #fbbf24;
+  --info: #22d3ee;
+  
+  /* Escala de cinza para modo escuro */
+  --white: #0f172a;
+  --gray-50: #1e293b;
+  --gray-100: #334155;
+  --gray-200: #475569;
+  --gray-300: #64748b;
+  --gray-400: #94a3b8;
+  --gray-600: #cbd5e1;
+  --gray-800: #e2e8f0;
+  --gray-900: #f1f5f9;
+  
+  /* Cores de texto para modo escuro */
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-large: #e2e8f0;
+}
+
+/* Aplicar estilos de modo escuro */
+.dark-mode .main-navigation {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border-bottom-color: var(--gray-200) !important;
+}
+
+.dark-mode .hero-section {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.15), rgba(15, 23, 42, 0.6)) !important;
+}
+
+.dark-mode .about-section,
+.dark-mode .featured-projects,
+.dark-mode .volunteer-section {
+  background: var(--white) !important;
+}
+
+.dark-mode .impact-section,
+.dark-mode .donation-section {
+  background: var(--gray-50) !important;
+}
+
+.dark-mode .main-footer {
+  background: var(--gray-900) !important;
+}
+
+.dark-mode .project-card,
+.dark-mode .about-card,
+.dark-mode .donation-card {
+  background: var(--gray-50) !important;
+  border-color: var(--gray-200) !important;
+}
+
+.dark-mode .project-card:hover,
+.dark-mode .about-card:hover,
+.dark-mode .donation-card:hover {
+  background: var(--gray-100) !important;
+  border-color: var(--accent) !important;
+}
+
+.dark-mode .nav-menu a {
+  color: var(--gray-800) !important;
+}
+
+.dark-mode .nav-menu a:hover,
+.dark-mode .nav-menu a:focus {
+  background: var(--gray-100) !important;
+  color: var(--primary-dark) !important;
+}
+
+.dark-mode .btn-primary {
+  background: var(--accent) !important;
+  color: var(--white) !important;
+  box-shadow: 0 8px 20px rgba(251, 146, 60, 0.3) !important;
+}
+
+.dark-mode .btn-primary:hover,
+.dark-mode .btn-primary:focus {
+  background: var(--accent-dark) !important;
+  box-shadow: 0 12px 24px rgba(251, 146, 60, 0.4) !important;
+}
+
+.dark-mode .btn-secondary {
+  background: var(--primary) !important;
+  color: var(--white) !important;
+  box-shadow: 0 8px 20px rgba(96, 165, 250, 0.3) !important;
+}
+
+.dark-mode .btn-secondary:hover,
+.dark-mode .btn-secondary:focus {
+  background: var(--primary-dark) !important;
+  box-shadow: 0 12px 24px rgba(96, 165, 250, 0.4) !important;
+}
+
+.dark-mode .btn-outline {
+  background: transparent !important;
+  color: var(--gray-800) !important;
+  border-color: var(--gray-300) !important;
+}
+
+.dark-mode .btn-outline:hover,
+.dark-mode .btn-outline:focus {
+  background: var(--gray-900) !important;
+  color: var(--white) !important;
+  border-color: var(--gray-900) !important;
+}
+
+.dark-mode .filter-tab {
+  background: var(--gray-100) !important;
+  color: var(--gray-800) !important;
+  border-color: var(--gray-200) !important;
+}
+
+.dark-mode .filter-tab:hover,
+.dark-mode .filter-tab:focus {
+  background: var(--accent-light) !important;
+  color: var(--gray-900) !important;
+}
+
+.dark-mode .filter-tab.active {
+  background: var(--accent) !important;
+  color: var(--white) !important;
+  border-color: var(--accent-dark) !important;
+}
+
+.dark-mode .amount-btn {
+  background: var(--gray-100) !important;
+  color: var(--gray-800) !important;
+  border-color: var(--gray-300) !important;
+}
+
+.dark-mode .amount-btn:hover,
+.dark-mode .amount-btn:focus {
+  background: var(--accent-light) !important;
+  border-color: var(--accent) !important;
+  color: var(--gray-900) !important;
+}
+
+.dark-mode .amount-btn.selected {
+  background: var(--accent) !important;
+  color: var(--white) !important;
+  border-color: var(--accent-dark) !important;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+  background: var(--gray-50) !important;
+  color: var(--gray-900) !important;
+  border-color: var(--gray-300) !important;
+}
+
+.dark-mode input:focus,
+.dark-mode select:focus,
+.dark-mode textarea:focus {
+  border-color: var(--primary) !important;
+  background: var(--white) !important;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2) !important;
+}
+
+.dark-mode .field-message.error {
+  color: var(--danger) !important;
+  background: var(--gray-50) !important;
+  border: 1px solid var(--danger) !important;
+  padding: var(--spacing-xs) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+.dark-mode .field-message.success {
+  color: var(--success) !important;
+  background: var(--gray-50) !important;
+  border: 1px solid var(--success) !important;
+  padding: var(--spacing-xs) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+.dark-mode .stat-number {
+  color: var(--primary) !important;
+}
+
+.dark-mode .stat-label {
+  color: var(--gray-600) !important;
+}
+
+/* Indicadores de foco aprimorados para ambos os modos */
+.high-contrast *:focus,
+.dark-mode *:focus {
+  outline: 3px solid var(--accent) !important;
+  outline-offset: 2px !important;
+}
+
+.high-contrast .btn:focus,
+.high-contrast .filter-tab:focus,
+.high-contrast .amount-btn:focus {
+  outline: 4px solid var(--accent) !important;
+  outline-offset: 3px !important;
+}
+
+.dark-mode .btn:focus,
+.dark-mode .filter-tab:focus,
+.dark-mode .amount-btn:focus {
+  outline: 3px solid var(--accent) !important;
+  outline-offset: 2px !important;
+}
+
+/* Melhorias para elementos específicos */
+.high-contrast .step-number {
+  background: var(--accent) !important;
+  color: var(--white) !important;
+  border: 3px solid var(--gray-900) !important;
+}
+
+.dark-mode .step-number {
+  background: var(--accent) !important;
+  color: var(--white) !important;
+}
+
+.high-contrast .step.active {
+  background: var(--white) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px var(--accent) !important;
+}
+
+.dark-mode .step.active {
+  background: var(--gray-50) !important;
+  border-color: var(--accent) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* Melhorias para impressão */
+@media print {
+  .high-contrast *,
+  .dark-mode * {
+    background: white !important;
+    color: black !important;
+    border-color: black !important;
+  }
+  
+  .high-contrast .btn,
+  .dark-mode .btn {
+    border: 2px solid black !important;
+  }
+}
+
+/* Transições suaves para mudanças de tema - Aplicadas apenas aos elementos específicos */
+.high-contrast *,
+.dark-mode * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Respeitar preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

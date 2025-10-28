@@ -24,6 +24,7 @@
 
   <title>Projetos Sociais - Quintal do Céu</title>
   <link rel="stylesheet" href="src/styles/styles.css">
+  <link rel="stylesheet" href="src/styles/accessibility.css">
 </head>
 
 <body>
@@ -84,11 +85,11 @@
     <section class="projects-filters" aria-label="Filtros de projetos">
       <div class="container">
         <div class="filter-tabs" role="tablist" aria-label="Filtros de categorias de projetos">
-          <a class="filter-tab active" href="#" role="tab" aria-selected="true" data-category="todos">Todos os Projetos</a>
-          <a class="filter-tab" href="#" role="tab" aria-selected="false" data-category="educacao">Educação</a>
-          <a class="filter-tab" href="#" role="tab" aria-selected="false" data-category="alimentacao">Alimentação</a>
-          <a class="filter-tab" href="#" role="tab" aria-selected="false" data-category="meio-ambiente">Meio Ambiente</a>
-          <a class="filter-tab" href="#" role="tab" aria-selected="false" data-category="saude">Saúde</a>
+          <button class="filter-tab active" role="tab" aria-selected="true" data-category="todos" aria-controls="projects-grid">Todos os Projetos</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-category="educacao" aria-controls="projects-grid">Educação</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-category="alimentacao" aria-controls="projects-grid">Alimentação</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-category="meio-ambiente" aria-controls="projects-grid">Meio Ambiente</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-category="saude" aria-controls="projects-grid">Saúde</button>
         </div>
       </div>
     </section>
@@ -302,6 +303,7 @@
   </footer>
 
   <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/js/accessibility.js"></script>
 </body>
 
 </html>

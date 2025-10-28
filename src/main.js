@@ -6,6 +6,8 @@
 // Importar máscaras e templates
 import './js/masks.js';
 import './js/templates.js';
+import './js/accessibility.js';
+import './js/screen-reader-support.js';
 
 // Menu hambúrguer para navegação mobile
 document.addEventListener('DOMContentLoaded', function() {

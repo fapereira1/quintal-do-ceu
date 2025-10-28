@@ -20,6 +20,7 @@
 
   <title>Quintal do Céu - Transformando Vidas</title>
   <link rel="stylesheet" href="src/styles/styles.css">
+  <link rel="stylesheet" href="src/styles/accessibility.css">
 </head>
 
 <body>
@@ -40,8 +41,13 @@
           <li role="none"><a href="projetos.html" role="menuitem">Projetos</a></li>
           <li role="none"><a href="#sobre" role="menuitem">Sobre Nós</a></li>
           <li role="none"><a href="#contato" role="menuitem">Contato</a></li>
-          <li role="none"><a href="cadastro.html" class="cta-button" role="menuitem">Voluntariar-se</a></li>
+          <li role="none"><a href="cadastro.html" class="cta-button" role="menuitem" aria-describedby="volunteer-description">Voluntariar-se</a></li>
         </ul>
+        
+        <!-- Descrição adicional para o botão de voluntariado -->
+        <div id="volunteer-description" class="sr-only">
+          Cadastre-se como voluntário e faça parte da nossa missão de transformar vidas
+        </div>
 
         <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
           <span></span>
@@ -116,21 +122,21 @@
     <section class="impact-section" aria-labelledby="impact-title">
       <div class="container">
         <h2 id="impact-title">Nosso Impacto em Números</h2>
-        <div class="impact-stats">
-          <div class="stat-item">
-            <span class="stat-number" data-target="5420">0</span>
+        <div class="impact-stats" role="group" aria-label="Estatísticas de impacto da organização">
+          <div class="stat-item" role="img" aria-label="5.420 vidas impactadas">
+            <span class="stat-number" data-target="5420" aria-hidden="true">0</span>
             <span class="stat-label">Vidas Impactadas</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="127">0</span>
+          <div class="stat-item" role="img" aria-label="127 voluntários ativos">
+            <span class="stat-number" data-target="127" aria-hidden="true">0</span>
             <span class="stat-label">Voluntários Ativos</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="23">0</span>
+          <div class="stat-item" role="img" aria-label="23 projetos ativos">
+            <span class="stat-number" data-target="23" aria-hidden="true">0</span>
             <span class="stat-label">Projetos Ativos</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="8">0</span>
+          <div class="stat-item" role="img" aria-label="8 anos de atuação">
+            <span class="stat-number" data-target="8" aria-hidden="true">0</span>
             <span class="stat-label">Anos de Atuação</span>
           </div>
         </div>
@@ -187,12 +193,13 @@
           <div class="donation-card">
             <h3>Doação Financeira</h3>
             <p>Contribua com qualquer valor para nossos projetos. Toda doação faz a diferença!</p>
-            <div class="donation-amounts" role="group" aria-label="Valores de doação sugeridos">
-              <button class="amount-btn" data-amount="25" aria-label="Doar 25 reais">R$ 25</button>
-              <button class="amount-btn" data-amount="50" aria-label="Doar 50 reais">R$ 50</button>
-              <button class="amount-btn" data-amount="100" aria-label="Doar 100 reais">R$ 100</button>
-              <button class="amount-btn custom" aria-label="Doar valor personalizado">Outro valor</button>
-            </div>
+            <fieldset class="donation-amounts">
+              <legend class="sr-only">Valores de doação sugeridos</legend>
+              <button class="amount-btn" data-amount="25" aria-label="Doar 25 reais" type="button">R$ 25</button>
+              <button class="amount-btn" data-amount="50" aria-label="Doar 50 reais" type="button">R$ 50</button>
+              <button class="amount-btn" data-amount="100" aria-label="Doar 100 reais" type="button">R$ 100</button>
+              <button class="amount-btn custom" aria-label="Doar valor personalizado" type="button">Outro valor</button>
+            </fieldset>
             <button class="btn btn-primary">Doar Agora</button>
           </div>
 
@@ -324,6 +331,7 @@
   </footer>
 
   <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/js/accessibility.js"></script>
 </body>
 
 </html>

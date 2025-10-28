@@ -1,0 +1,202 @@
+/* Estilos de Acessibilidade - WCAG 2.1 Nível AA */
+
+/* Utilitários para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Skip Links aprimorados - Garantindo que fiquem ocultos */
+.skip-links {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 1000;
+}
+
+.skip-link {
+  position: absolute !important;
+  top: -100px !important;
+  left: var(--spacing-xs);
+  background: var(--primary);
+  color: var(--white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  z-index: 1000;
+  transition: top 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.skip-link:focus {
+  top: var(--spacing-xs) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  clip: auto !important;
+  overflow: visible !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  outline: 3px solid var(--white);
+  outline-offset: 2px;
+}
+
+/* Botões de acessibilidade */
+.accessibility-toggle {
+  position: fixed;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  background: var(--white);
+  color: var(--primary);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accessibility-toggle:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.accessibility-toggle:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.accessibility-toggle[aria-pressed="true"] {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* Modos de tema definidos no themes.css */
+
+/* Navegação por teclado aprimorada */
+.nav-menu a:focus,
+.filter-tab:focus,
+.amount-btn:focus,
+.step-indicator:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  z-index: 10;
+}
+
+/* Cards focáveis */
+.project-card:focus,
+.about-card:focus,
+.donation-card:focus {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  z-index: 10;
+}
+
+.high-contrast .project-card:focus,
+.high-contrast .about-card:focus,
+.high-contrast .donation-card:focus {
+  outline: 4px solid var(--accent);
+  outline-offset: 3px;
+  border: 3px solid var(--gray-900);
+}
+
+/* Animações reduzidas para usuários sensíveis */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .btn:hover,
+  .project-card:hover,
+  .about-card:hover {
+    transform: none;
+  }
+}
+
+/* Melhorias para usuários com baixa visão */
+@media (prefers-reduced-motion: no-preference) {
+  .btn,
+  .project-card,
+  .about-card,
+  .donation-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, outline 0.2s ease;
+  }
+}
+
+/* Contraste mínimo garantido - Usando cores originais do tema */
+
+/* Responsividade para acessibilidade */
+@media (max-width: 768px) {
+  .accessibility-toggle {
+    position: fixed;
+    bottom: var(--spacing-sm);
+    right: var(--spacing-sm);
+    top: auto;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .skip-link {
+    font-size: 16px;
+    padding: var(--spacing-sm);
+  }
+}
+
+/* Melhorias para impressão */
+@media print {
+  .accessibility-toggle,
+  .skip-links {
+    display: none;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}

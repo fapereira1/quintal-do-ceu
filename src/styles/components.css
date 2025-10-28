@@ -54,23 +54,7 @@
   display: block;
 }
 
-/* Skip Link */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: var(--spacing-xs);
-  background: #000;
-  color: #fff;
-  padding: var(--spacing-xs);
-  text-decoration: none;
-  z-index: 1000;
-  border-radius: var(--radius-sm);
-  font-weight: 600;
-}
-
-.skip-link:focus {
-  top: var(--spacing-xs);
-}
+/* Skip Link - Definido no accessibility.css */
 
 /* Botões */
 .btn {
