@@ -14,11 +14,16 @@ input:focus,
 select:focus,
 textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(13,110,253,0.1); }
 
-/* Estados de validação (compatível com atributos HTML5) */
-input:required:invalid,
-select:required:invalid { border-color: var(--danger); }
-input:required:valid,
-select:required:valid { border-color: var(--success); }
+/* Estados de validação - somente após blur (touched) ou após submit (was-submitted) */
+form.was-submitted input:invalid,
+form.was-submitted select:invalid,
+input.touched:invalid,
+select.touched:invalid { border-color: var(--danger); }
+
+form.was-submitted input:valid,
+form.was-submitted select:valid,
+input.touched:valid,
+select.touched:valid { border-color: var(--success); }
 
 .field-message { font-size: var(--font-size-small); margin-top: var(--spacing-2xs); }
 .field-message.error { color: var(--danger); }

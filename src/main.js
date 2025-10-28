@@ -27,6 +27,33 @@ document.addEventListener('DOMContentLoaded', function() {
       animateValue(stat, 0, target, 2000);
     }
   });
+
+  // Validação: aplicar somente após blur (touched) ou submit (was-submitted)
+  const forms = document.querySelectorAll('form');
+  forms.forEach((form) => {
+    // Marcar campos como touched no blur
+    form.addEventListener('focusout', (e) => {
+      const el = e.target;
+      if (el && (el.tagName === 'INPUT' || el.tagName === 'SELECT' || el.tagName === 'TEXTAREA')) {
+        el.classList.add('touched');
+      }
+    }, true);
+
+    // Controle do submit: evitar validação visual antes do submit
+    form.addEventListener('submit', (e) => {
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        form.classList.add('was-submitted');
+        // Focar no primeiro inválido para acessibilidade
+        const firstInvalid = form.querySelector(':invalid');
+        if (firstInvalid && typeof firstInvalid.focus === 'function') {
+          firstInvalid.focus();
+        }
+      } else {
+        form.classList.add('was-submitted');
+      }
+    });
+  });
 });
 
 // Função para animar números
