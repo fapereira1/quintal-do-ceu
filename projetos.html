@@ -84,11 +84,11 @@
     <section class="projects-filters" aria-label="Filtros de projetos">
       <div class="container">
         <div class="filter-tabs" role="tablist" aria-label="Filtros de categorias de projetos">
-          <a class="filter-tab active" href="#projects-grid" role="tab" aria-selected="true" id="tab-todos">Todos os Projetos</a>
-          <a class="filter-tab" href="#educacao" role="tab" aria-selected="false" id="tab-educacao">Educação</a>
-          <a class="filter-tab" href="#alimentacao" role="tab" aria-selected="false" id="tab-alimentacao">Alimentação</a>
-          <a class="filter-tab" href="#meio-ambiente" role="tab" aria-selected="false" id="tab-meio-ambiente">Meio Ambiente</a>
-          <a class="filter-tab" href="#saude" role="tab" aria-selected="false" id="tab-saude">Saúde</a>
+          <a class="filter-tab active" href="#" role="tab" aria-selected="true" data-category="todos">Todos os Projetos</a>
+          <a class="filter-tab" href="#" role="tab" aria-selected="false" data-category="educacao">Educação</a>
+          <a class="filter-tab" href="#" role="tab" aria-selected="false" data-category="alimentacao">Alimentação</a>
+          <a class="filter-tab" href="#" role="tab" aria-selected="false" data-category="meio-ambiente">Meio Ambiente</a>
+          <a class="filter-tab" href="#" role="tab" aria-selected="false" data-category="saude">Saúde</a>
         </div>
       </div>
     </section>
@@ -99,287 +99,7 @@
         <h2 id="projects-title" class="sr-only">Lista de Projetos</h2>
 
         <div id="projects-grid" class="projects-grid" role="list" aria-label="Lista de projetos sociais">
-          <!-- Projeto 1: Educação para Todos -->
-          <article id="educacao" class="project-card" role="listitem" data-category="educacao">
-            <div class="project-image">
-              <img src="src/assets/images/atividade-educativa2.webp"
-                alt="Crianças em sala de aula durante atividade de reforço escolar" loading="lazy">
-              <div class="project-status">Ativo</div>
-            </div>
-
-            <div class="project-content">
-              <div class="project-category">Educação</div>
-              <h3>Educação para Todos</h3>
-              <p class="project-description">
-                Oferecemos reforço escolar, alfabetização de adultos e atividades complementares
-                para crianças e jovens de comunidades em vulnerabilidade social.
-              </p>
-
-              <div class="project-stats">
-                <div class="stat">
-                  <span class="stat-number">280</span>
-                  <span class="stat-label">Beneficiados</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-number">15</span>
-                  <span class="stat-label">Voluntários</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-number">3</span>
-                  <span class="stat-label">Locais</span>
-                </div>
-              </div>
-
-              <div class="project-needs">
-                <h4>Como Você Pode Ajudar:</h4>
-                <ul>
-                  <li><strong>Voluntariado:</strong> Professores, estudantes universitários</li>
-                  <li><strong>Doações:</strong> Material escolar, livros didáticos</li>
-                  <li><strong>Financeiro:</strong> R$ 50/mês custeia 1 criança</li>
-                </ul>
-              </div>
-
-              <div class="project-actions">
-                <a href="cadastro.html?projeto=educacao" class="btn btn-primary">Quero Ajudar</a>
-                <button class="btn btn-outline" data-modal="educacao-details">Ver Detalhes</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Projeto 2: Alimentação Solidária -->
-          <article id="alimentacao" class="project-card" role="listitem" data-category="alimentacao">
-            <div class="project-image">
-              <img src="src/assets/images/voluntarios-distribuindo-alimentos.webp" alt="Voluntários preparando e distribuindo refeições"
-                loading="lazy">
-              <div class="project-status">Ativo</div>
-            </div>
-
-            <div class="project-content">
-              <div class="project-category">Alimentação</div>
-              <h3>Alimentação Solidária</h3>
-              <p class="project-description">
-                Distribuição semanal de cestas básicas, refeições prontas e programa de
-                hortas comunitárias para combater a insegurança alimentar.
-              </p>
-
-              <div class="project-stats">
-                <div class="stat">
-                  <span class="stat-number">450</span>
-                  <span class="stat-label">Famílias</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-number">25</span>
-                  <span class="stat-label">Voluntários</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-number">7</span>
-                  <span class="stat-label">Pontos</span>
-                </div>
-              </div>
-
-              <div class="project-needs">
-                <h4>Como Você Pode Ajudar:</h4>
-                <ul>
-                  <li><strong>Voluntariado:</strong> Preparo e distribuição de alimentos</li>
-                  <li><strong>Doações:</strong> Alimentos não perecíveis, cestas básicas</li>
-                  <li><strong>Financeiro:</strong> R$ 75/mês custeia 1 família</li>
-                </ul>
-              </div>
-
-              <div class="project-actions">
-                <a href="cadastro.html?projeto=alimentacao" class="btn btn-primary">Quero Ajudar</a>
-                <button class="btn btn-outline" data-modal="alimentacao-details">Ver Detalhes</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Projeto 3: Verde Urbano -->
-          <article id="meio-ambiente" class="project-card" role="listitem" data-category="meio-ambiente">
-            <div class="project-image">
-              <img src="src/assets/images/voluntario-plantando-arvores2.webp" alt="Voluntários plantando árvores em área urbana"
-                loading="lazy">
-              <div class="project-status">Ativo</div>
-            </div>
-
-            <div class="project-content">
-              <div class="project-category">Meio Ambiente</div>
-              <h3>Verde Urbano</h3>
-              <p class="project-description">
-                Revitalização de espaços urbanos através de plantio de árvores, criação de
-                hortas comunitárias e educação ambiental para crianças e adultos.
-              </p>
-
-              <div class="project-stats">
-                <div class="stat">
-                  <span class="stat-number">1200</span>
-                  <span class="stat-label">Árvores</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-number">20</span>
-                  <span class="stat-label">Voluntários</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-number">12</span>
-                  <span class="stat-label">Hortas</span>
-                </div>
-              </div>
-
-              <div class="project-needs">
-                <h4>Como Você Pode Ajudar:</h4>
-                <ul>
-                  <li><strong>Voluntariado:</strong> Plantio, manutenção de hortas</li>
-                  <li><strong>Doações:</strong> Mudas, ferramentas de jardinagem</li>
-                  <li><strong>Financeiro:</strong> R$ 30/mês custeia 1 horta</li>
-                </ul>
-              </div>
-
-              <div class="project-actions">
-                <a href="cadastro.html?projeto=meio-ambiente" class="btn btn-primary">Quero Ajudar</a>
-                <button class="btn btn-outline" data-modal="meio-ambiente-details">Ver Detalhes</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Projeto 4: Saúde em Movimento -->
-          <article id="saude" class="project-card" role="listitem" data-category="saude">
-            <div class="project-image">
-              <img src="src/assets/images/projeto-saude-detail.jpg" alt="Profissionais de saúde atendendo comunidade"
-                loading="lazy">
-              <div class="project-status">Ativo</div>
-            </div>
-
-            <div class="project-content">
-              <div class="project-category">Saúde</div>
-              <h3>Saúde em Movimento</h3>
-              <p class="project-description">
-                Atendimento médico básico, campanhas de vacinação e palestras de prevenção
-                em comunidades com acesso limitado aos serviços de saúde.
-              </p>
-
-              <div class="project-stats">
-                <div class="stat">
-                  <span class="stat-number">650</span>
-                  <span class="stat-label">Atendimentos</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-number">12</span>
-                  <span class="stat-label">Profissionais</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-number">8</span>
-                  <span class="stat-label">Campanhas</span>
-                </div>
-              </div>
-
-              <div class="project-needs">
-                <h4>Como Você Pode Ajudar:</h4>
-                <ul>
-                  <li><strong>Voluntariado:</strong> Profissionais de saúde, estudantes</li>
-                  <li><strong>Doações:</strong> Medicamentos, equipamentos médicos</li>
-                  <li><strong>Financeiro:</strong> R$ 100/mês custeia 1 campanha</li>
-                </ul>
-              </div>
-
-              <div class="project-actions">
-                <a href="cadastro.html?projeto=saude" class="btn btn-primary">Quero Ajudar</a>
-                <button class="btn btn-outline" data-modal="saude-details">Ver Detalhes</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Projeto 5: Capacitação Profissional -->
-          <article id="capacitacao" class="project-card" role="listitem" data-category="educacao">
-            <div class="project-image">
-              <img src="src/assets/images/projeto-capacitacao-detail.jpg" alt="Jovens em curso de capacitação profissional"
-                loading="lazy">
-              <div class="project-status">Em Planejamento</div>
-            </div>
-
-            <div class="project-content">
-              <div class="project-category">Educação</div>
-              <h3>Capacitação Profissional</h3>
-              <p class="project-description">
-                Cursos de capacitação profissional e empreendedorismo para jovens e adultos,
-                promovendo autonomia financeira e inserção no mercado de trabalho.
-              </p>
-
-              <div class="project-stats">
-                <div class="stat">
-                  <span class="stat-number">150</span>
-                  <span class="stat-label">Meta Alunos</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-number">8</span>
-                  <span class="stat-label">Cursos</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-number">2</span>
-                  <span class="stat-label">Unidades</span>
-                </div>
-              </div>
-
-              <div class="project-needs">
-                <h4>Como Você Pode Ajudar:</h4>
-                <ul>
-                  <li><strong>Voluntariado:</strong> Instrutores, empresários mentores</li>
-                  <li><strong>Doações:</strong> Equipamentos, computadores</li>
-                  <li><strong>Financeiro:</strong> R$ 120/mês custeia 1 aluno</li>
-                </ul>
-              </div>
-
-              <div class="project-actions">
-                <a href="cadastro.html?projeto=capacitacao" class="btn btn-primary">Quero Ajudar</a>
-                <button class="btn btn-outline" data-modal="capacitacao-details">Ver Detalhes</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Projeto 6: Apoio ao Idoso -->
-          <article id="idoso" class="project-card" role="listitem" data-category="saude">
-            <div class="project-image">
-              <img src="src/assets/images/idoso-atividade-recreativa1.webp"
-                alt="Voluntários interagindo com idosos em atividade recreativa" loading="lazy">
-              <div class="project-status">Ativo</div>
-            </div>
-
-            <div class="project-content">
-              <div class="project-category">Saúde</div>
-              <h3>Apoio ao Idoso</h3>
-              <p class="project-description">
-                Atividades recreativas, acompanhamento médico domiciliar e suporte emocional
-                para idosos em situação de vulnerabilidade ou isolamento social.
-              </p>
-
-              <div class="project-stats">
-                <div class="stat">
-                  <span class="stat-number">85</span>
-                  <span class="stat-label">Idosos</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-number">18</span>
-                  <span class="stat-label">Voluntários</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-number">4</span>
-                  <span class="stat-label">Regiões</span>
-                </div>
-              </div>
-
-              <div class="project-needs">
-                <h4>Como Você Pode Ajudar:</h4>
-                <ul>
-                  <li><strong>Voluntariado:</strong> Companhia, atividades recreativas</li>
-                  <li><strong>Doações:</strong> Produtos de higiene, medicamentos</li>
-                  <li><strong>Financeiro:</strong> R$ 80/mês custeia 1 idoso</li>
-                </ul>
-              </div>
-
-              <div class="project-actions">
-                <a href="cadastro.html?projeto=idoso" class="btn btn-primary">Quero Ajudar</a>
-                <button class="btn btn-outline" data-modal="idoso-details">Ver Detalhes</button>
-              </div>
-            </div>
-          </article>
+          <!-- Projetos serão renderizados dinamicamente via JavaScript -->
         </div>
       </div>
     </section>
@@ -388,31 +108,107 @@
     <section class="volunteer-section" aria-labelledby="volunteer-title">
       <div class="container">
         <h2 id="volunteer-title">Como Se Tornar Voluntário</h2>
-        <div class="volunteer-steps">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h3>Inscreva-se</h3>
-            <p>Preencha nosso formulário de cadastro com suas informações e áreas de interesse.</p>
+        <p class="volunteer-intro">Siga estes 4 passos simples para começar sua jornada como voluntário:</p>
+        
+        <div class="volunteer-steps-container">
+          <div class="volunteer-steps">
+            <div class="step active" data-step="1">
+              <div class="step-header">
+                <div class="step-number">1</div>
+                <h3>Inscreva-se</h3>
+              </div>
+              <div class="step-content">
+                <p>Preencha nosso formulário de cadastro com suas informações e áreas de interesse.</p>
+                <div class="step-details">
+                  <ul>
+                    <li>✓ Dados pessoais básicos</li>
+                    <li>✓ Áreas de interesse</li>
+                    <li>✓ Disponibilidade de horários</li>
+                    <li>✓ Experiências anteriores</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="step" data-step="2">
+              <div class="step-header">
+                <div class="step-number">2</div>
+                <h3>Entrevista</h3>
+              </div>
+              <div class="step-content">
+                <p>Participaremos de uma conversa para conhecer melhor seu perfil e expectativas.</p>
+                <div class="step-details">
+                  <ul>
+                    <li>✓ Conversa online ou presencial</li>
+                    <li>✓ Alinhamento de expectativas</li>
+                    <li>✓ Definição do projeto ideal</li>
+                    <li>✓ Cronograma de atividades</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="step" data-step="3">
+              <div class="step-header">
+                <div class="step-number">3</div>
+                <h3>Capacitação</h3>
+              </div>
+              <div class="step-content">
+                <p>Oferecemos treinamento específico para que você esteja preparado para contribuir.</p>
+                <div class="step-details">
+                  <ul>
+                    <li>✓ Treinamento específico do projeto</li>
+                    <li>✓ Orientações de segurança</li>
+                    <li>✓ Conhecimento sobre a comunidade</li>
+                    <li>✓ Certificação de voluntário</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="step" data-step="4">
+              <div class="step-header">
+                <div class="step-number">4</div>
+                <h3>Ação</h3>
+              </div>
+              <div class="step-content">
+                <p>Comece a fazer a diferença nos projetos que mais combinam com seu perfil!</p>
+                <div class="step-details">
+                  <ul>
+                    <li>✓ Início das atividades práticas</li>
+                    <li>✓ Acompanhamento contínuo</li>
+                    <li>✓ Suporte da equipe</li>
+                    <li>✓ Celebração dos resultados</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="step">
-            <div class="step-number">2</div>
-            <h3>Entrevista</h3>
-            <p>Participaremos de uma conversa para conhecer melhor seu perfil e expectativas.</p>
-          </div>
-          <div class="step">
-            <div class="step-number">3</div>
-            <h3>Capacitação</h3>
-            <p>Oferecemos treinamento específico para que você esteja preparado para contribuir.</p>
-          </div>
-          <div class="step">
-            <div class="step-number">4</div>
-            <h3>Ação</h3>
-            <p>Comece a fazer a diferença nos projetos que mais combinam com seu perfil!</p>
+
+          <div class="step-navigation">
+            <button class="step-nav-btn prev" disabled aria-label="Passo anterior">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15,18 9,12 15,6"></polyline>
+              </svg>
+              Anterior
+            </button>
+            <div class="step-indicators">
+              <button class="step-indicator active" data-step="1" aria-label="Ir para passo 1"></button>
+              <button class="step-indicator" data-step="2" aria-label="Ir para passo 2"></button>
+              <button class="step-indicator" data-step="3" aria-label="Ir para passo 3"></button>
+              <button class="step-indicator" data-step="4" aria-label="Ir para passo 4"></button>
+            </div>
+            <button class="step-nav-btn next" aria-label="Próximo passo">
+              Próximo
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9,18 15,12 9,6"></polyline>
+              </svg>
+            </button>
           </div>
         </div>
 
         <div class="volunteer-cta">
-          <a href="cadastro.html" class="btn btn-primary btn-large">Quero Ser Voluntário</a>
+          <a href="cadastro.html" class="btn btn-primary btn-large">Começar Agora - Passo 1</a>
         </div>
       </div>
     </section>

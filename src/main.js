@@ -3,8 +3,9 @@
  * Ponto de entrada da aplicação
  */
 
-// Importar máscaras
+// Importar máscaras e templates
 import './assets/js/masks.js';
+import './assets/js/templates.js';
 
 // Menu hambúrguer para navegação mobile
 document.addEventListener('DOMContentLoaded', function() {
@@ -19,14 +20,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Animação de números para estatísticas
-  const statNumbers = document.querySelectorAll('.stat-number');
-  statNumbers.forEach(function(stat) {
-    const target = parseInt(stat.getAttribute('data-target') || '0');
-    if (target > 0) {
-      animateValue(stat, 0, target, 2000);
-    }
-  });
+  // Inicializar sistema de templates (se estiver na página de projetos)
+  if (document.querySelector('#projects-grid')) {
+    window.ProjectTemplates.initializeTemplates();
+  } else {
+    // Animação de números para estatísticas (páginas sem templates)
+    const statNumbers = document.querySelectorAll('.stat-number');
+    statNumbers.forEach(function(stat) {
+      const target = parseInt(stat.getAttribute('data-target') || '0');
+      if (target > 0) {
+        animateValue(stat, 0, target, 2000);
+      }
+    });
+  }
 
   // Validação: aplicar somente após blur (touched) ou submit (was-submitted)
   const forms = document.querySelectorAll('form');
