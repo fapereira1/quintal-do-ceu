@@ -4,8 +4,8 @@
  */
 
 // Importar máscaras e templates
-import './assets/js/masks.js';
-import './assets/js/templates.js';
+import './js/masks.js';
+import './js/templates.js';
 
 // Menu hambúrguer para navegação mobile
 document.addEventListener('DOMContentLoaded', function() {
