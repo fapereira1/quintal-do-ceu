@@ -34,6 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Inicializar sistema de steps de voluntariado
+  if (document.querySelector('.volunteer-steps')) {
+    initializeVolunteerSteps();
+  }
+
   // Validação: aplicar somente após blur (touched) ou submit (was-submitted)
   const forms = document.querySelectorAll('form');
   forms.forEach((form) => {
@@ -74,4 +79,84 @@ function animateValue(element, start, end, duration) {
     }
   };
   window.requestAnimationFrame(step);
+}
+
+// Função para inicializar o sistema de steps de voluntariado
+function initializeVolunteerSteps() {
+  const steps = document.querySelectorAll('.step');
+  const stepIndicators = document.querySelectorAll('.step-indicator');
+  const prevBtn = document.querySelector('.step-nav-btn.prev');
+  const nextBtn = document.querySelector('.step-nav-btn.next');
+  
+  let currentStep = 1;
+  const totalSteps = steps.length;
+
+  // Função para atualizar a exibição dos steps
+  function updateSteps(stepNumber) {
+    // Remover classe active de todos os steps
+    steps.forEach(step => step.classList.remove('active'));
+    stepIndicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    // Adicionar classe active ao step atual
+    const currentStepElement = document.querySelector(`[data-step="${stepNumber}"]`);
+    const currentIndicator = document.querySelector(`.step-indicator[data-step="${stepNumber}"]`);
+    
+    if (currentStepElement) {
+      currentStepElement.classList.add('active');
+    }
+    if (currentIndicator) {
+      currentIndicator.classList.add('active');
+    }
+    
+    // Atualizar estado dos botões de navegação
+    if (prevBtn) {
+      prevBtn.disabled = stepNumber === 1;
+    }
+    if (nextBtn) {
+      nextBtn.disabled = stepNumber === totalSteps;
+    }
+    
+  }
+
+  // Função para obter o título do step
+  function getStepTitle(stepNumber) {
+    const stepTitles = {
+      1: 'Inscreva-se',
+      2: 'Entrevista', 
+      3: 'Capacitação',
+      4: 'Ação'
+    };
+    return stepTitles[stepNumber] || '';
+  }
+
+  // Event listeners para botões de navegação
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function() {
+      if (currentStep > 1) {
+        currentStep--;
+        updateSteps(currentStep);
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function() {
+      if (currentStep < totalSteps) {
+        currentStep++;
+        updateSteps(currentStep);
+      }
+    });
+  }
+
+  // Event listeners para indicadores de step
+  stepIndicators.forEach(indicator => {
+    indicator.addEventListener('click', function() {
+      const stepNumber = parseInt(this.getAttribute('data-step'));
+      currentStep = stepNumber;
+      updateSteps(currentStep);
+    });
+  });
+
+  // Inicializar com o primeiro step ativo
+  updateSteps(1);
 }
