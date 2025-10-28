@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="src/assets/icons/quintal-icone.png" />
+  <link rel="icon" type="image/png" href="src/assets/icons/quintal-icone.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Quintal do Céu - Transformando vidas através da compaixão e ação social. Conectamos voluntários, doadores e comunidades para criar impacto positivo.">
@@ -69,7 +69,7 @@
   <!-- Conteúdo Principal -->
   <main id="main-content" class="main-content" role="main">
     <!-- Seção Hero -->
-    <section class="page-hero" aria-labelledby="projects-hero-title">
+    <section class="hero-section" aria-labelledby="projects-hero-title">
       <div class="hero-container">
         <h1 id="projects-hero-title">Nossos Projetos Sociais</h1>
         <p class="hero-subtitle">
@@ -80,29 +80,15 @@
     </section>
 
     <!-- Filtros de Projetos -->
+    
     <section class="projects-filters" aria-label="Filtros de projetos">
       <div class="container">
         <div class="filter-tabs" role="tablist" aria-label="Filtros de categorias de projetos">
-          <button class="filter-tab active" role="tab" aria-selected="true" 
-                  aria-controls="projects-grid" data-filter="todos" id="tab-todos">
-            Todos os Projetos
-          </button>
-          <button class="filter-tab" role="tab" aria-selected="false" 
-                  aria-controls="projects-grid" data-filter="educacao" id="tab-educacao">
-            Educação
-          </button>
-          <button class="filter-tab" role="tab" aria-selected="false" 
-                  aria-controls="projects-grid" data-filter="alimentacao" id="tab-alimentacao">
-            Alimentação
-          </button>
-          <button class="filter-tab" role="tab" aria-selected="false" 
-                  aria-controls="projects-grid" data-filter="meio-ambiente" id="tab-meio-ambiente">
-            Meio Ambiente
-          </button>
-          <button class="filter-tab" role="tab" aria-selected="false" 
-                  aria-controls="projects-grid" data-filter="saude" id="tab-saude">
-            Saúde
-          </button>
+          <a class="filter-tab active" href="#projects-grid" role="tab" aria-selected="true" id="tab-todos">Todos os Projetos</a>
+          <a class="filter-tab" href="#educacao" role="tab" aria-selected="false" id="tab-educacao">Educação</a>
+          <a class="filter-tab" href="#alimentacao" role="tab" aria-selected="false" id="tab-alimentacao">Alimentação</a>
+          <a class="filter-tab" href="#meio-ambiente" role="tab" aria-selected="false" id="tab-meio-ambiente">Meio Ambiente</a>
+          <a class="filter-tab" href="#saude" role="tab" aria-selected="false" id="tab-saude">Saúde</a>
         </div>
       </div>
     </section>
@@ -255,7 +241,7 @@
           </article>
 
           <!-- Projeto 4: Saúde em Movimento -->
-          <article class="project-card" role="listitem" data-category="saude">
+          <article id="saude" class="project-card" role="listitem" data-category="saude">
             <div class="project-image">
               <img src="src/assets/images/projeto-saude-detail.jpg" alt="Profissionais de saúde atendendo comunidade"
                 loading="lazy">
@@ -302,7 +288,7 @@
           </article>
 
           <!-- Projeto 5: Capacitação Profissional -->
-          <article class="project-card" role="listitem" data-category="educacao">
+          <article id="capacitacao" class="project-card" role="listitem" data-category="educacao">
             <div class="project-image">
               <img src="src/assets/images/projeto-capacitacao-detail.jpg" alt="Jovens em curso de capacitação profissional"
                 loading="lazy">
@@ -349,7 +335,7 @@
           </article>
 
           <!-- Projeto 6: Apoio ao Idoso -->
-          <article class="project-card" role="listitem" data-category="saude">
+          <article id="idoso" class="project-card" role="listitem" data-category="saude">
             <div class="project-image">
               <img src="src/assets/images/idoso-atividade-recreativa1.webp"
                 alt="Voluntários interagindo com idosos em atividade recreativa" loading="lazy">

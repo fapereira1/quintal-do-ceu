@@ -1,0 +1,508 @@
+/* Navegação principal */
+.main-navigation {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm) 0;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  color: var(--gray-900);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  background: var(--gray-100);
+  color: var(--primary-dark);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: var(--spacing-xs);
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--primary);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: var(--spacing-xs);
+  background: #000;
+  color: #fff;
+  padding: var(--spacing-xs);
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: var(--spacing-xs);
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: calc(var(--spacing-xs) + 2px) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+  cursor: pointer;
+  border: 0;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--white);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.2);
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(249, 115, 22, 0.25);
+}
+
+.btn-secondary {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--gray-300);
+  color: var(--gray-800);
+}
+
+.btn-outline:hover {
+  background: var(--gray-900);
+  color: var(--white);
+  border-color: var(--gray-900);
+}
+
+/* Cards de projeto */
+.project-card {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid var(--gray-200);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-content {
+  padding: var(--spacing-md);
+}
+
+.project-status {
+  position: absolute;
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
+  background: var(--success);
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: var(--font-size-small);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Seções específicas - Layout centralizado com max-width */
+.hero-section {
+  background: var(--gradient-hero);
+  padding: var(--spacing-2xl) 0;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+  align-items: center;
+  padding: 0 var(--spacing-md);
+}
+
+.hero-content {
+  grid-column: span 1;
+}
+
+.hero-image {
+  grid-column: span 1;
+}
+
+.hero-actions {
+  margin-top: var(--spacing-md);
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+/* Sobre - 3 colunas centralizadas */
+.about-section {
+  padding: var(--spacing-2xl) 0;
+  background: var(--white);
+}
+
+.about-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.about-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.about-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Impacto - 4 estatísticas centralizadas com cards uniformes */
+.impact-section {
+  padding: var(--spacing-2xl) 0;
+  background: var(--gray-50);
+}
+
+.impact-section h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.impact-stats {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.stat-item {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-xl);
+  text-align: center;
+  border: 1px solid var(--gray-200);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 140px;
+}
+
+.stat-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  color: var(--gray-600);
+  font-size: var(--font-size-body);
+  font-weight: 500;
+}
+
+/* Projetos em destaque - 3 colunas */
+.featured-projects {
+  padding: var(--spacing-2xl) 0;
+  background: var(--white);
+}
+
+.featured-projects h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.projects-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.projects-cta {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+}
+
+/* Breadcrumb (reforço) */
+.breadcrumb a:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Footer - 4 colunas centralizadas */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.footer-section {
+  grid-column: span 1;
+}
+
+.footer-section.col12 {
+  grid-column: span 12;
+  text-align: center;
+}
+
+.footer-section h4 {
+  color: var(--white);
+  margin-top: 0;
+}
+
+.footer-section p,
+.footer-section a,
+.footer-section li {
+  color: var(--gray-300);
+}
+
+.footer-bottom {
+  text-align: center;
+  color: var(--gray-400);
+  margin-top: var(--spacing-lg);
+}
+
+/* Abas de filtro de projetos (tema quente) */
+.filter-tabs {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+  padding-block: 15px;
+}
+
+.filter-tab {
+  background: var(--gray-100);
+  color: var(--gray-800);
+  border: 1px solid var(--gray-200);
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  
+
+}
+
+.filter-tab:hover {
+  background: var(--accent-light);
+  color: var(--gray-900);
+}
+
+.filter-tab[aria-selected="true"],
+.filter-tab.active {
+  background: var(--accent);
+  color: var(--white);
+  border-color: var(--accent-dark);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.25);
+}
+
+.filter-tab:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+
+/* Seção de Doação */
+.donation-section {
+  padding: var(--spacing-2xl) 0;
+  background: var(--gray-50);
+}
+
+.donation-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.donation-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+}
+
+.donation-amounts {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+  margin: var(--spacing-md) 0;
+}
+
+.amount-btn {
+  background: var(--gray-100);
+  color: var(--gray-800);
+  border: 2px solid var(--gray-300);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.amount-btn:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--gray-900);
+  transform: translateY(-2px);
+}
+
+.amount-btn:active,
+.amount-btn.selected {
+  background: var(--accent);
+  color: var(--white);
+  border-color: var(--accent-dark);
+}
+
+.amount-btn.custom {
+  font-style: italic;
+}
+
+.donation-items {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-md) 0;
+}
+
+.donation-items li {
+  padding: var(--spacing-xs) 0;
+  color: var(--gray-600);
+}
+
+.donation-items li::before {
+  content: "✓ ";
+  color: var(--success);
+  font-weight: bold;
+}
+
+
+/* Links das redes sociais */
+.social-links {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: left;
+  align-items: center;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.social-links a:hover {
+  background: var(--gray-100);
+  transform: translateY(-2px);
+}
+
+/* Grid para valores de doação - base */
+.donation-amounts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-xs);
+}
+
+.amount-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  min-height: 44px;
+}
+
+.amount-btn.custom {
+  grid-column: 1 / -1;
+}
+

@@ -1,0 +1,66 @@
+/* Breakpoints responsivos (mobile-first) */
+
+/* >= 576px - tablets retrato */
+@media (min-width: 576px) {
+  .container { padding: 0 var(--spacing-md); }
+}
+
+/* >= 768px - tablets paisagem */
+@media (min-width: 768px) {
+  .container { padding: 0 var(--spacing-lg); }
+  .hero-content { grid-column: span 6; }
+  .hero-image { grid-column: span 6; }
+  .projects-grid > .project-card { grid-column: span 4; }
+  .impact-stats { grid-template-columns: repeat(2, 1fr); }
+  .stat-item { grid-column: span 1; }
+}
+
+/* >= 992px - desktop */
+@media (min-width: 992px) {
+  .container { max-width: 960px; }
+  .impact-stats { grid-template-columns: repeat(4, 1fr); }
+  .stat-item { grid-column: span 1; }
+}
+
+/* >= 1200px - desktop grande */
+@media (min-width: 1200px) {
+  .container { max-width: 1140px; }
+}
+
+/* Valores de doação responsivos */
+@media (min-width: 576px) {
+  .donation-amounts { grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm); }
+}
+
+@media (min-width: 768px) {
+  .donation-amounts { grid-template-columns: repeat(4, 1fr); }
+  .amount-btn.custom { grid-column: auto; }
+}
+
+@media (min-width: 992px) {
+  .donation-amounts { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Ajustes mobile */
+@media (max-width: 767px) {
+  .nav-menu { display: none; position: fixed; top: 0; right: 0; width: 80%; height: 100vh; background: var(--white); flex-direction: column; padding: var(--spacing-xl); box-shadow: var(--shadow-lg); border-left: 1px solid var(--gray-200); }
+  .nav-menu.active { display: flex; }
+  .menu-toggle { display: flex; }
+
+  .hero-container { grid-template-columns: 1fr; }
+  .hero-content, .hero-image { grid-column: span 1; }
+
+  .about-grid { grid-template-columns: 1fr; }
+  .about-card { grid-column: span 1; }
+
+  .projects-grid { grid-template-columns: 1fr; gap: var(--spacing-lg); }
+  .projects-grid > .project-card { grid-column: span 1; }
+
+  .impact-stats { grid-template-columns: repeat(2, 1fr); gap: var(--spacing-md); }
+  .stat-item { grid-column: span 1; min-height: 120px; padding: var(--spacing-lg); }
+  .stat-number { font-size: 2rem; }
+
+  .footer-content { grid-template-columns: 1fr; gap: var(--spacing-lg); }
+  .footer-section { grid-column: span 1; }
+}
+

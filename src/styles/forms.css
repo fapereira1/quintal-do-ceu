@@ -1,0 +1,38 @@
+/* Formulários e estados de validação */
+
+.form-help { display: block; margin-top: 4px; font-size: var(--font-size-small); color: var(--gray-600); }
+
+label { display: inline-block; margin-bottom: var(--spacing-2xs); font-weight: 600; color: var(--gray-900); }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea { width: 100%; padding: var(--spacing-xs); border: 2px solid var(--gray-200); border-radius: var(--radius-sm); font-size: var(--font-size-body); transition: border-color 0.2s ease, box-shadow 0.2s ease; background: var(--white); color: var(--gray-900); }
+
+input:focus,
+select:focus,
+textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(13,110,253,0.1); }
+
+/* Estados de validação (compatível com atributos HTML5) */
+input:required:invalid,
+select:required:invalid { border-color: var(--danger); }
+input:required:valid,
+select:required:valid { border-color: var(--success); }
+
+.field-message { font-size: var(--font-size-small); margin-top: var(--spacing-2xs); }
+.field-message.error { color: var(--danger); }
+.field-message.success { color: var(--success); }
+
+/* Estrutura do formulário de cadastro */
+.registration-section .registration-content { display: grid; grid-template-columns: 1fr 2fr; gap: var(--spacing-lg); }
+.registration-info { background: var(--gray-50); padding: var(--spacing-md); border: 1px solid var(--gray-200); border-radius: var(--radius-md); }
+
+fieldset { border: 1px solid var(--gray-200); padding: var(--spacing-md); border-radius: var(--radius-md); margin-bottom: var(--spacing-md); }
+legend { padding: 0 var(--spacing-xs); font-weight: 700; color: var(--gray-800); }
+
+button[type="submit"],
+button[type="button"],
+input[type="submit"] { padding: var(--spacing-xs) var(--spacing-md); border-radius: var(--radius-sm); border: 0; background: var(--primary); color: var(--white); font-weight: 700; }
+button[type="submit"]:hover { background: var(--primary-dark); }
+

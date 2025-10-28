@@ -1,0 +1,31 @@
+/* Layout principal e sistema de grid */
+
+/* Estrutura base da página */
+.main-header { background: var(--white); box-shadow: var(--shadow-sm); }
+.main-content { padding: var(--spacing-lg) 0; }
+.main-footer { background: var(--gray-900); color: var(--gray-300); padding: var(--spacing-2xl) 0; border-top: 1px solid rgba(255,255,255,0.06); }
+
+/* Grid 12 colunas */
+.grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--spacing-md); }
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-6 { grid-column: span 6; }
+.col-12 { grid-column: span 12; }
+
+/* Containers utilitários */
+.section { padding: var(--spacing-xl) 0; }
+.hero-section { background: var(--gray-50); padding: var(--spacing-2xl) 0; }
+
+/* Breadcrumb */
+.breadcrumb { background: var(--gray-50); padding: 0.5rem 0; border-bottom: 1px solid var(--gray-200); }
+.breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 0.5rem; }
+.breadcrumb li { display: flex; align-items: center; color: var(--gray-600); }
+.breadcrumb li:not(:last-child)::after { content: "›"; margin-left: 0.5rem; color: var(--gray-600); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* Utilidades de centralização */
+.center { display: grid; place-items: center; }
+
